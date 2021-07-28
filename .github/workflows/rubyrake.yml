@@ -33,5 +33,3 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests About Apples
       run: rake apple
-    - name: Test Help sytem
-      run: rake Help
