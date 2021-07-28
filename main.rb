@@ -1,5 +1,5 @@
 require "down"
-def installImage(url)
+def latte-InstallImage(url)
     File.open("info.log", "w") { |f| f.write "#{Time.now} - img -Image download started\n" }
     if "#{url}"==""
         puts "fatal Error:No url"
@@ -17,4 +17,8 @@ def installImage(url)
 
     end
 end
-installImage ""
+def latte--help()
+    puts "Latte help sytem"
+    puts "To install a image from a url try latte-InstallImage 'url of image' "
+    puts "for more help try the docs"
+InstallImage ""
