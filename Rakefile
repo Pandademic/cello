@@ -7,5 +7,5 @@ task :Help do
   puts "Latte help sytem"
   puts "To install a image from a url try latte-InstallImage 'url of image' "
   puts "for more help try the docs"
-InstallImage ""
+#InstallImage ""FIXME:I should not be here
 end

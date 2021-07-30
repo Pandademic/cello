@@ -1,3 +1,5 @@
 /cups/
 Rakefile
 *log
+/junkTrunk/
+*.txt
