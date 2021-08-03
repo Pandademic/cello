@@ -9,7 +9,11 @@ elsif ARGV.size <1
 end
 if ARGV.first== "InstallImg"
      @url=ARGV[1]
-     Down.download("#@url", destination: "cups/WithUrl/")
+     if "#@url"== ""
+        abort("This URL is non-existent")
+     else
+        Down.download("#@url", destination: "cups/WithUrl/")
+    end
 
 else
     abort("This task does not exist")
