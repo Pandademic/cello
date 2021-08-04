@@ -15,6 +15,3 @@ jobs:
       - run:
           name: Fileutils
           command: gem install file-utils
-       -run:
-          name: Test Help
-          command: ruby latte.rb help

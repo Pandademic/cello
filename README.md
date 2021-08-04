@@ -13,4 +13,7 @@ download the latest zip form the REleases tab
 
 # Usage
 - - -
-404 ,nothing here
+**EXISTING:**
+- Latte help -> Manual
+- Latte InstallImg 'url' -> installs image from url
+**PLANED:**
