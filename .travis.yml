@@ -5,7 +5,7 @@ rvm:
  - 3
  - jruby
 install: gem install down
-install: gem install fileutils 
+install: gem install file-utils 
 jobs:
   include:
       - stage: "Hello world!"

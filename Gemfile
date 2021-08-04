@@ -1,3 +1,3 @@
 gem "down", "~> 5.0"
-gem 'prettier'
-gem 'fileutils'
+#gem 'prettier'
+gem 'file-utils'
