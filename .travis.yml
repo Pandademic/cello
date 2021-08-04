@@ -1,0 +1,20 @@
+language: ruby
+dist: xenial
+rvm:
+ - 2.2
+ - jruby
+install: gem install down
+install: gem install fileutils 
+jobs:
+  include:
+      - stage: "Hello world!"
+        name: "Hello world"
+        script: ./HelloWorld.rb
+      - stage: "Test Latte default"
+        name: "Test"
+        script: ./latte.rb
+      - stage: "Linux"
+        name:  "Test"
+        script: ./linux/latte
+notifictions:
+  email: false         
