@@ -1,0 +1,6 @@
+/cups/
+Rakefile
+*log
+/junkTrunk/
+*.txt
+/local/
