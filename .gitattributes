@@ -1,3 +1,0 @@
-# Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
-*.draft linguist-language=Text
-#*md linguist-language=Documentation
