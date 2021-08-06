@@ -1,0 +1,12 @@
+Metrics/MethodLength:
+   Enabled: false
+AllCops:
+  AutoCorrect: false
+  TargetRubyVersion: 2.5
+Lint/UnreachableLoop:
+   Enabled: false
+Layout/EndOfLine: 
+   Enabled: false
+Metrics/AbcSize:
+   Enabled: false
+   
