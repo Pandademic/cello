@@ -9,4 +9,4 @@ Layout/EndOfLine:
    Enabled: false
 Metrics/AbcSize:
    Enabled: false
-   
+Naming/MethodName: camelCase
