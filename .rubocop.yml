@@ -1,12 +1,14 @@
 Metrics/MethodLength:
    Enabled: false
 AllCops:
-  AutoCorrect: false
-  TargetRubyVersion: 2.5
+  AutoCorrect: true
+  TargetRubyVersion: 2.7
 Lint/UnreachableLoop:
    Enabled: false
 Layout/EndOfLine:
    Enabled: false
 Metrics/AbcSize:
    Enabled: false
-Naming/MethodName: camelCase
+Naming/MethodName: 
+   AutoCorrect: false       
+
