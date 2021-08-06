@@ -10,5 +10,8 @@ Layout/EndOfLine:
 Metrics/AbcSize:
    Enabled: false
 Naming/MethodName: 
-   AutoCorrect: false       
+   AutoCorrect: false
+   Enabled: false       
+Naming/FileName:
+   Enabled: false
 
