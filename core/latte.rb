@@ -1,7 +1,5 @@
 # frozen_string_literal: true
-
-require 'down'
-require 'fileutils'
+Bundler.require(:default)
 abort('ERROR:No task specified') while ARGV.empty?
 def help
   puts 'Latte help sytem'
