@@ -1,6 +1,7 @@
 FROM ruby:2.5
 RUN gem install down:5.0
 WORKDIR /
+RUN git init
 RUN gem install file-utils
 RUN gem install rubocop
 RUN git branch Docker-build
