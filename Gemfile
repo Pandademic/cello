@@ -1,3 +1,3 @@
-gem 'file-utils'
 gem 'down'
+gem 'file-utils'
 gem 'inifile'
