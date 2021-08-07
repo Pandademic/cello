@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.5 as DEPS
 COPY  . .
 WORKDIR /
 RUN gem install down:5.0
@@ -7,6 +7,14 @@ RUN gem install file-utils
 WORKDIR /
 RUN gem install rubocop
 WORKDIR /
+FROM ruby:2.5 as Linter
+WORKDIR /
+COPY . .
 RUN rubocop -A
-RUN echo "testing help"
-RUN ruby core/latte.rb help
+FROM ubuntu:latest as Ubuntu
+WORKDIR /
+COPY . . 
+RUN sudo apt install ruby-full
+RUN ruby --version
+RUN bundle install
+CMD [ "ruby","core/latte.rb help" ]
