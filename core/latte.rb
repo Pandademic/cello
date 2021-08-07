@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 Bundler.require(:default)
 abort('ERROR:No task specified') while ARGV.empty?
 module Helper
@@ -26,9 +27,3 @@ case Mycase
  when ARGV.first == 'InstallImg'
    Image.Install
   
-=begin
-when ARGV.first == 'create'
-  create((ARGV[1]).to_s)
-end
-=end
-#create can no loner be done via command line
