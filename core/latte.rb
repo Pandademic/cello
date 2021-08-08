@@ -6,13 +6,14 @@ require 'fileutils'
 require 'bundler'
 # Bundler.require(:default)
 abort('ERROR:No task specified') while ARGV.empty?
+# Module to Provide help service
 module Helper
   def self.help
     puts 'Latte help sytem'
     puts "To install a image from a url try latte InstallImage 'url of image' "
   end
 end
-
+# module to download Images
 module Image
   def self.main(url)
     @url = url
@@ -24,17 +25,17 @@ module Image
     end
     end
 end
-
+# module to download Packages
 module Pkg
-  def self.find(query)
-    $query = query
-    $destination = "https://github.com/Pandademic/Latte/packages/#{$query}.ini"
-    $File = IniFile.load($destination.to_s)
-    $data = File['package']
-    $source = data['Source']
-    puts "query: #{$query}"
-    puts "destination:#{$destination}"
-    puts "sourceUrl:#{$source}"
+  def self.pkg(query)
+    @query = query
+    @destination = "https://github.com/Pandademic/Latte/packages/#{$query}.ini"
+    @File = IniFile.load(@destination.to_s)
+    @data = File['package']
+    @source = data['Source']
+    puts "query: #{@query}"
+    puts "destination:#{@destination}"
+    puts "sourceUrl:#{@source}"
     end
 end
 
