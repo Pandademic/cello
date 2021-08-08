@@ -4,17 +4,16 @@
 <a href="https://gitpod.io/#github.com/Pandademic/Latte">![gitpod](https://img.shields.io/static/v1?label=Gitpod&message=Open%20in%20Gitpod&color=orange&logo=Gitpod)</a>
 ---
 
-Latte is a Open source MIT licenced Package management system.Like homebrew it is mainly ruby.
+Latte is a Open source MIT licenced Package management system.It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip/tar.gz. 
 
 # Install
 - - -
  
-download the latest zip form the REleases tab
+download the latest zip form the Releases tab
 
 
 # Usage
 - - -
-**EXISTING:**
 - Latte help -> Manual
 - Latte InstallImg 'url' -> installs image from url
 
@@ -23,5 +22,5 @@ __________
 steps:
 - 1. Fork this repo
 - 2. Make a new github repo and do your coding there
-- 3. Then in the packages folder create a packageName.ini where packageName is your packages name based upon the specs.ini file in ypur fork
+- 3. Then in the Fork of packages folder create a packageName.ini where packageName is your packages name.Then look at the package_specs.ini in the docs to format the package.ini
 - 4. Push your changes in the fork to a pull request
