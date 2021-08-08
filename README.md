@@ -1,6 +1,7 @@
 # Latte
 
 [![CodeFactor](https://www.codefactor.io/repository/github/pandademic/latte/badge)](https://www.codefactor.io/repository/github/pandademic/latte)
+[![gitpod](https://img.shields.io/static/v1?label=Gitpod&message=Open%20in%20Gitpod&color=orange&logo=Gitpod)
 ---
 
 Latte is a Open source MIT licenced Package management system.Like homebrew it is mainly ruby.
