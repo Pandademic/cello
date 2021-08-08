@@ -13,6 +13,7 @@ module Helper
     puts "To install a image from a url try latte InstallImage 'url of image' "
   end
 end
+
 # module to download Images
 module Image
   def self.main(url)
@@ -25,6 +26,7 @@ module Image
     end
     end
 end
+
 # module to download Packages
 module Pkg
   def self.pkg(query)
