@@ -11,10 +11,10 @@ FROM ruby:2.5 as Linter
 WORKDIR /
 COPY . .
 RUN rubocop -A
-FROM ubuntu:latest as Ubuntu
+FROM ubuntu:20 as Ubuntu
 WORKDIR /
 COPY . . 
-RUN sudo apt install ruby-full
+RUN apt install ruby-full
 RUN ruby --version
 RUN bundle install
 CMD [ "ruby","core/latte.rb help" ]
