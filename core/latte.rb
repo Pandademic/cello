@@ -1,9 +1,8 @@
 # frozen_string_literal: true
-
 require 'Down'
 require 'inifile'
 require 'fileutils'
-require 'bundler'
+#require 'bundler'
 # Bundler.require(:default)
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
@@ -24,7 +23,7 @@ module Image
       File.open('info.log', 'w') { |f| f.write "#{Time.now} - img -Image download started\n" }
       Down.download(@url.to_s, destination: 'cups/WithUrl/')
     end
-    end
+  end
 end
 
 # module to download Packages
@@ -38,7 +37,7 @@ module Pkg
     puts "query: #{@query}"
     puts "destination:#{@destination}"
     puts "sourceUrl:#{@source}"
-    end
+  end
 end
 
 FileUtils.touch('info.log')
