@@ -31,7 +31,7 @@ end
 module Pkg
   def self.pkg(query)
     @query = query
-    @destination = "https://github.com/Pandademic/Latte/packages/#{$query}.ini"
+    @destination = "https://github.com/Pandademic/Latte/packages/#{@query}.ini"
     @File = IniFile.load(@destination.to_s)
     @data = File['package']
     @source = data['Source']
