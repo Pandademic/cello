@@ -1,8 +1,9 @@
 # frozen_string_literal: true
+
 require 'Down'
 require 'inifile'
 require 'fileutils'
-#require 'bundler'
+# require 'bundler'
 # Bundler.require(:default)
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
