@@ -15,7 +15,7 @@ RUN rubocop -A
 FROM ubuntu:20 as Ubuntu
 WORKDIR /
 COPY . . 
-RUN apt-get install ruby-full
+RUN apt install ruby-full
 RUN ruby --version
 RUN bundle install
 CMD [ "ruby","core/latte.rb help" ]
