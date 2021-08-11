@@ -1,4 +1,5 @@
 FROM ruby:2.5 as DEPS
+WORKDIR /
 COPY  . .
 WORKDIR /
 RUN gem install down:5.0
