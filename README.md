@@ -22,5 +22,5 @@ __________
 steps:
 - 1. Fork this repo
 - 2. Make a new github repo and do your coding there
-- 3. Then in the Fork of packages folder create a packageName.ini where packageName is your packages name.Then look at the package_specs.ini in the docs to format the package.ini
+- 3. Then in the Fork of packages folder create a packageName.ini where packageName is your packages name.Then look at the package_example.ini in the docs to format the package.ini
 - 4. Push your changes in the fork to a pull request
