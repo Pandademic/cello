@@ -20,12 +20,6 @@ Latte is a Open source MIT licenced Package management system.It works by take t
  - in your ./bashrc put ``alias latte ="ruby latte" `` 
  - and you should be good to use commands!
 
-
-# Usage
-- - -
-- Latte help -> Manual
-- Latte InstallImg 'url' -> installs image from url
-
 # Creating a package
 __________
 steps:
