@@ -1,4 +1,4 @@
-# Latte
+# Latte an
 
 [![CodeFactor](https://www.codefactor.io/repository/github/pandademic/latte/badge)](https://www.codefactor.io/repository/github/pandademic/latte)
 <a href="https://gitpod.io/#github.com/Pandademic/Latte">![gitpod](https://img.shields.io/static/v1?label=Gitpod&message=Open%20in%20Gitpod&color=orange&logo=Gitpod)</a>
@@ -8,8 +8,17 @@ Latte is a Open source MIT licenced Package management system.It works by take t
 
 # Install
 - - -
- 
-download the latest zip from the Releases tab
+ ## Prerequisites
+ ____
+ - ruby
+ - latest zip or file
+ ## Actual Install
+ ___
+ ## Linux:
+ ____
+ - extract the file in ~/linux/ into your home directory
+ - in your ./bashrc put ``alias latte ="ruby latte" `` 
+ - and you should be good to use commands!
 
 
 # Usage
