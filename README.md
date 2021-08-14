@@ -9,7 +9,7 @@ Latte is a Open source MIT licenced Package management system.It works by take t
 # Install
 - - -
  
-download the latest zip form the Releases tab
+download the latest zip from the Releases tab
 
 
 # Usage
