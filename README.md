@@ -16,8 +16,9 @@ Latte is a Open source MIT licenced Package management system.It works by take t
  ___
  ## Linux:
  ____
- - extract the file in ~/linux/ into your home directory
- - in your ./bashrc put ``alias latte ="ruby latte" `` 
+ - extract the file called latte(should be located in the home folder of the source code) into your home directory
+ - in your ./bashrc put ```bash
+ alias latte ="ruby ~/latte" ``` 
  - and you should be good to use commands!
 
 # Creating a package
