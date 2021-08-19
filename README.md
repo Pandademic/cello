@@ -1,4 +1,4 @@
-# Latte an
+# Latte 
 
 [![CodeFactor](https://www.codefactor.io/repository/github/pandademic/latte/badge)](https://www.codefactor.io/repository/github/pandademic/latte)
 <a href="https://gitpod.io/#github.com/Pandademic/Latte">![gitpod](https://img.shields.io/static/v1?label=Gitpod&message=Open%20in%20Gitpod&color=orange&logo=Gitpod)</a>
@@ -17,7 +17,8 @@ Latte is a Open source MIT licenced Package management system.It works by take t
  ## Linux:
  ____
  - extract the file called latte(should be located in the dist folder of the source code) into your home directory
- - in your ./bashrc or .zshrc or .fishrc put ``
+ - in your ./bashrc or .zshrc or .fishrc put 
+ - ``sh
  alias latte ="ruby ~/latte" 
  `` 
  - and you should be good to use commands!
