@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-$destination=""
+
+$destination = ''
 require 'down'
 require 'inifile'
 require 'fileutils'
@@ -32,17 +33,17 @@ module Pkg
   def self.findPkg(query)
     @query = query
     @destination = "https://github.com/Pandademic/Latte/packages/#{@query}.ini"
-    #@File = IniFile.load(@destination.to_s)
-    #@data = File['package']
-    #@source = data['Source']
-    #puts "query: #{@query}"
+    # @File = IniFile.load(@destination.to_s)
+    # @data = File['package']
+    # @source = data['Source']
+    # puts "query: #{@query}"
     puts "destination:#{@destination}"
-    $destination=@destination
-    
-    #puts "sourceUrl:#{@source}"
+    $destination = @destination
+
+    # puts "sourceUrl:#{@source}"
   end
 end
 FileUtils.touch('info.log')
 Helper.help if ARGV[0] == 'help'
-@param1=ARGV[1]
-Pkg.findPkg("#{param1}") if ARGV[0] == 'install'
+@param1 = ARGV[1]
+Pkg.findPkg(param1.to_s) if ARGV[0] == 'install'
