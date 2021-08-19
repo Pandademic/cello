@@ -1,0 +1,15 @@
+name: Ruby 2.5 CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.5 # Not needed with a .ruby-version file
+        #bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - run: bundle lock --add-platform x86_64-linux
+    - run: bundle install
+    - run: ruby latte help
+    - run: ruby latte installImg 'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/22130127/Pug-puppy-standing-in-profile-on-a-white-background.jpg'
