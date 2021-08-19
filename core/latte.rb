@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'Down'
+require 'down'
 require 'inifile'
 require 'fileutils'
 # require 'bundler'
@@ -40,12 +40,10 @@ module Pkg
     puts "sourceUrl:#{@source}"
   end
 end
-
 FileUtils.touch('info.log')
-# when ARGV.first == 'help'
-while ARGV[0] == 'help'
+if ARGV[0] == 'help'
   Helper.help
-  # FIXME: #4 Infinte loop
 end
-# when ARGV.first == 'InstallImg'
-# Core.Image.main(ARGV[1])ru
+if ARGV[0]== 'install'
+  Pkg.pkg(ARGV[1])
+end
