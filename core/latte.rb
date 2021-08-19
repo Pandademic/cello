@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 $destination = ''
+$query=""
 require 'down'
 require 'inifile'
 require 'fileutils'
+require 'net/http'
+require 'uri'
 # require 'bundler'
 # Bundler.require(:default)
 abort('ERROR:No task specified') while ARGV.empty?
@@ -39,9 +42,19 @@ module Pkg
     # puts "query: #{@query}"
     puts "destination:#{@destination}"
     $destination = @destination
+    Pkg.getTmpfile($destination.to_s)
+    $query=@query
 
     # puts "sourceUrl:#{@source}"
   end
+  def self.getTmpfile(url)
+    file ="#{@query}.ini"
+    url = URI.parse(url)
+    Net::HTTP.start(url.host) do |http|
+      resp = http.get(url.path)
+      open(file, "wb") do |file|
+        file.write(resp.body)
+
 end
 FileUtils.touch('info.log')
 Helper.help if ARGV[0] == 'help'
