@@ -7,6 +7,7 @@ require 'inifile'
 require 'fileutils'
 require 'net/http'
 require 'uri'
+require 'facter'
 # require 'bundler'
 # Bundler.require(:default)
 abort('ERROR:No task specified') while ARGV.empty?
