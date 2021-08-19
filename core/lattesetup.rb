@@ -1,7 +1,7 @@
 require 'facter'
-puts "os="
+puts 'os='
 puts Facter['osfamily'].value
-$os=Facter['osfamily'].value
-#if $os ==""
-#   
-#end
+$os = Facter['osfamily'].value
+# if $os ==""
+#
+# end
