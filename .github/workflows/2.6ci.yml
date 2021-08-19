@@ -1,5 +1,4 @@
-#may not stay
-name: Test on versions
+name: Ruby 2.6 CI
 on: [push, pull_request]
 jobs:
   test:
