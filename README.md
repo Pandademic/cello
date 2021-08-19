@@ -10,7 +10,7 @@ Latte is a Open source MIT licenced Package management system.It works by take t
 - - -
  ## Prerequisites
  ____
- - ruby
+ - ruby 2.6 or higher
  - latest zip or file
  ## Actual Install
  ___
