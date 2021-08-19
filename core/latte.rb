@@ -41,9 +41,5 @@ module Pkg
   end
 end
 FileUtils.touch('info.log')
-if ARGV[0] == 'help'
-  Helper.help
-end
-if ARGV[0]== 'install'
-  Pkg.pkg(ARGV[1])
-end
+Helper.help if ARGV[0] == 'help'
+Pkg.pkg(ARGV[1]) if ARGV[0] == 'install'
