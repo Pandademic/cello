@@ -47,7 +47,7 @@ module Pkg
   def self.getPkgfile()
       $packageFile=open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#$query.ini")
       puts "Package file:/n #$packageFile"  
-
+  end
 end
 FileUtils.touch('info.log')
 Helper.help if ARGV[0] == 'help'
