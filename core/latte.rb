@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 $destination = ''
-$query=""
+$query = ''
 require 'down'
 require 'inifile'
 require 'fileutils'
 require 'open-uri'
-#require 'net/http'
-#require 'uri'
+# require 'net/http'
+# require 'uri'
 require 'facter'
 # require 'bundler'
 # Bundler.require(:default)
@@ -37,16 +37,16 @@ end
 module Pkg
   def self.findPkg(query)
     @query = query
-    puts "Getting #@query"
-    $query=@query
+    puts "Getting #{@query}"
+    $query = @query
     Pkg.getPkgfile
-    
 
     # puts "sourceUrl:#{@source}"
   end
-  def self.getPkgfile()
-      $packageFile=open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#$query.ini")
-      puts "Package file:/n #$packageFile"  
+
+  def self.getPkgfile
+    $packageFile = open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini")
+    puts "Package file:/n #{$packageFile}"
   end
 end
 FileUtils.touch('info.log')
