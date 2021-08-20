@@ -5,8 +5,9 @@ $query=""
 require 'down'
 require 'inifile'
 require 'fileutils'
-require 'net/http'
-require 'uri'
+require 'open-uri'
+#require 'net/http'
+#require 'uri'
 require 'facter'
 # require 'bundler'
 # Bundler.require(:default)
@@ -36,25 +37,16 @@ end
 module Pkg
   def self.findPkg(query)
     @query = query
-    @destination = "https://github.com/Pandademic/Latte/packages/#{@query}.ini"
-    # @File = IniFile.load(@destination.to_s)
-    # @data = File['package']
-    # @source = data['Source']
-    # puts "query: #{@query}"
-    puts "destination:#{@destination}"
-    $destination = @destination
-    Pkg.getTmpfile($destination.to_s)
+    puts "Getting #@query"
     $query=@query
+    Pkg.getPkgfile
+    
 
     # puts "sourceUrl:#{@source}"
   end
-  def self.getTmpfile(url)
-    file ="#{@query}.ini"
-    url = URI.parse(url)
-    Net::HTTP.start(url.host) do |http|
-      resp = http.get(url.path)
-      open(file, "wb") do |file|
-        file.write(resp.body)
+  def self.getPkgfile()
+      $packageFile=open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#$query.ini")
+      puts "Package file:/n #$packageFile"  
 
 end
 FileUtils.touch('info.log')
