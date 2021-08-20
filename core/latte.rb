@@ -43,16 +43,17 @@ module Pkg
 
     # puts "sourceUrl:#{@source}"
   end
-  def self.getPkgfile()
-      $packageFile=open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#$query.ini").read
-      puts "Package file:/n #$packageFile" 
-      system("wget #$packageFile")
-      file=IniFile.load("#{$packageFile}.ini")
-      data=file['package']
-      puts "relase zip:"
-      puts data['Release']
-      $r=data['Release']
-      system("wget #$r")
+
+  def self.getPkgfile
+    $packageFile = open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
+    puts "Package file:/n #{$packageFile}"
+    system("wget #{$packageFile}")
+    file = IniFile.load("#{$packageFile}.ini")
+    data = file['package']
+    puts 'relase zip:'
+    puts data['Release']
+    $r = data['Release']
+    system("wget #{$r}")
   end
 end
 FileUtils.touch('info.log')
