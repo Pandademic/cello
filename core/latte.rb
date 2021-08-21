@@ -2,8 +2,8 @@
 
 $destination = ''
 $query = ''
-$r=""
-$packageFile=""
+$r = ''
+$packageFile = ''
 require 'down'
 require 'inifile'
 require 'fileutils'
