@@ -48,8 +48,8 @@ module Pkg
     $packageFileread = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
     $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
     puts "Package file:#{$packageFileread}"
-    system("wget #$packageFileURL")
-    #"wget #{$packageFileURL}"
+    system("wget #{$packageFileURL}")
+    # "wget #{$packageFileURL}"
     puts 'wget complete'
     # system("wget #{$packageFile}")
     # file = IniFile.load("#{$packageFile}.ini")
