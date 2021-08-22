@@ -54,15 +54,15 @@ module Pkg
 
   def self.downloadLatest
     file = IniFile.load("/tmp/#{$query}.ini")
-    puts "loaded file"
+    puts 'loaded file'
     data = file['package']
     puts 'Release URL:'
     puts data['Release']
     @RURL = data['Release']
     system("wget #{@RURL}")
-  #rescue 
-    #abort("an error ocured")
-    #exit 1
+    # rescue
+    # abort("an error ocured")
+    # exit 1
   end
 end
 FileUtils.touch('info.log')
