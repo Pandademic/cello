@@ -8,8 +8,6 @@ require 'down'
 require 'inifile'
 require 'fileutils'
 require 'open-uri'
-# require 'net/http'
-# require 'uri'
 require 'facter'
 # require 'bundler'
 # Bundler.require(:default)
@@ -47,18 +45,21 @@ module Pkg
   end
 
   def self.getPkgfile
-    $packageFile = open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
-    puts "Package file:/n #{$packageFile}"
-    system("wget #{$packageFile}")
-    file = IniFile.load("#{$packageFile}.ini")
-    data = file['package']
-    puts 'relase zip:'
-    puts data['Release']
-    $r = data['Release']
-    system("wget #{$r}")
+    $packageFileread = open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
+    $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
+    puts "Package file:#{$packageFileread}"
+    "wget #$packageFileURL"
+    #system("wget #{$packageFile}")
+    #file = IniFile.load("#{$packageFile}.ini")
+    #data = file['package']
+    #puts 'relase zip:'
+    #puts data['Release']
+    #$r = data['Release']
+    #system("wget #{$r}")
   end
 end
 FileUtils.touch('info.log')
 Helper.help if ARGV[0] == 'help'
 @param1 = ARGV[1]
 Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
+
