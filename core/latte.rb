@@ -1,16 +1,11 @@
 # frozen_string_literal: true
-
-$destination = ''
-$query = ''
-$r = ''
-$packageFile = ''
 require 'down'
 require 'inifile'
-require 'fileutiqls'
+require 'fileutils'
 require 'open-uri'
 require 'facter'
-# require 'bundler'
-# Bundler.require(:default)
+$os= Facter['osfamily'].value
+puts "you are on #$os"
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
 module Helper
@@ -52,7 +47,7 @@ module Pkg
     system("wget #{$packageFileURL} --directory-prefix=/tmp/")
     # "wget #{$packageFileURL}"
     puts 'package file download complete'
-    
+
     # TODO: implement begin.resuce,else,ensure,end
   end
 end
