@@ -49,7 +49,7 @@ module Pkg
     $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
     puts "Package file:#{$packageFileread}"
     "wget #{$packageFileURL}"
-    puts "wget complete"
+    puts 'wget complete'
     # system("wget #{$packageFile}")
     # file = IniFile.load("#{$packageFile}.ini")
     # data = file['package']
