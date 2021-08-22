@@ -45,10 +45,11 @@ module Pkg
   end
 
   def self.getPkgfile
-    $packageFileread = open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
+    $packageFileread = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
     $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
     puts "Package file:#{$packageFileread}"
     "wget #{$packageFileURL}"
+    puts "wget complete"
     # system("wget #{$packageFile}")
     # file = IniFile.load("#{$packageFile}.ini")
     # data = file['package']
