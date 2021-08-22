@@ -51,6 +51,18 @@ module Pkg
 
     # TODO: implement begin.resuce,else,ensure,end
   end
+  def self.downloadLatest()
+      file = IniFile.load("/tmp/#$query.ini")
+      data = file["package"]
+      puts "Release URL:"
+      puts data["Release"]
+      @RURL=data['Release']
+      system("wget #@RURL")
+
+    
+
+
+  end 
 end
 FileUtils.touch('info.log')
 Helper.help if ARGV[0] == 'help'
