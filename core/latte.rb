@@ -51,7 +51,7 @@ module Pkg
     system("wget #{$packageFileURL}")
     # "wget #{$packageFileURL}"
     puts 'wget complete'
-    #TODO:implement begin.resuce,else,ensure,end
+    # TODO: implement begin.resuce,else,ensure,end
     # system("wget #{$packageFile}")
     # file = IniFile.load("#{$packageFile}.ini")
     # data = file['package']
