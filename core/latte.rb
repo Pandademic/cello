@@ -48,11 +48,11 @@ module Pkg
     $packageFileread = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
     $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
     puts "Package file:#{$packageFileread}"
-    FileUtils.mkdir(tmp,:force=>true)
+    FileUtils.mkdir(tmp, force: true)
     system("wget #{$packageFileURL} --directory-prefix=/tmp/")
     # "wget #{$packageFileURL}"
     puts 'package file download complete'
-    
+
     # TODO: implement begin.resuce,else,ensure,end
   end
 end
