@@ -48,17 +48,21 @@ module Pkg
     system("wget #{$packageFileURL} --directory-prefix=/tmp/")
     # "wget #{$packageFileURL}"
     puts 'package file download complete'
-
+    Pkg.downloadLatest
     # TODO: implement begin.resuce,else,ensure,end
   end
 
   def self.downloadLatest
     file = IniFile.load("/tmp/#{$query}.ini")
+    puts "loaded file"
     data = file['package']
     puts 'Release URL:'
     puts data['Release']
     @RURL = data['Release']
     system("wget #{@RURL}")
+  #rescue 
+    #abort("an error ocured")
+    #exit 1
   end
 end
 FileUtils.touch('info.log')
