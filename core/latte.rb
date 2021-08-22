@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+
 require 'down'
 require 'inifile'
 require 'fileutils'
 require 'open-uri'
 require 'facter'
-$os= Facter['osfamily'].value
-puts "you are on #$os"
+$os = Facter['osfamily'].value
+puts "you are on #{$os}"
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
 module Helper
