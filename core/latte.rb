@@ -6,7 +6,7 @@ $r = ''
 $packageFile = ''
 require 'down'
 require 'inifile'
-require 'fileutils'
+require 'fileutiqls'
 require 'open-uri'
 require 'facter'
 # require 'bundler'
@@ -48,17 +48,12 @@ module Pkg
     $packageFileread = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
     $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
     puts "Package file:#{$packageFileread}"
-    system("wget #{$packageFileURL}")
+    FileUtils.mkdir(tmp,:force=>true)
+    system("wget #{$packageFileURL} --directory-prefix=/tmp/")
     # "wget #{$packageFileURL}"
-    puts 'wget complete'
+    puts 'package file download complete'
+    
     # TODO: implement begin.resuce,else,ensure,end
-    # system("wget #{$packageFile}")
-    # file = IniFile.load("#{$packageFile}.ini")
-    # data = file['package']
-    # puts 'relase zip:'
-    # puts data['Release']
-    # $r = data['Release']
-    # system("wget #{$r}")
   end
 end
 FileUtils.touch('info.log')
