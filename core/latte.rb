@@ -39,12 +39,12 @@ module Pkg
   end
 
   def self.getPkgfile
-    ensure
-      $packageFileread = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
-      $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
-      puts "Package file:#{$packageFileread}"
-      system("wget #{$packageFileURL} --directory-prefix=/tmp/")
-      puts 'package file download complete'
+  ensure
+    $packageFileread = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
+    $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
+    puts "Package file:#{$packageFileread}"
+    system("wget #{$packageFileURL} --directory-prefix=/tmp/")
+    puts 'package file download complete'
     Pkg.downloadLatest
     # TODO: implement begin.resuce,else,ensure,end
   end
