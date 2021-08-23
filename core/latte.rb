@@ -2,7 +2,6 @@
 
 require 'down'
 require 'inifile'
-# require 'fileutils'
 require 'open-uri'
 require 'facter'
 $os = Facter['osfamily'].value
