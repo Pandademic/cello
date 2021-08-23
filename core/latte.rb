@@ -19,7 +19,7 @@ end
 # module to download Images
 module Image
   def self.main(url)
-    $SAFE=4
+    $SAFE = 4
     @url = url
     if @url.to_s == ''
       abort('This URL is non-existent')
@@ -62,11 +62,11 @@ module Pkg
     puts 'This is not a url'
     exit 1
   end
-  rescue SecurityError => e
-    puts "operation is not safe"
-    puts "halting......."
-    puts "halted"
-    exit 1
+rescue SecurityError => e
+  puts 'operation is not safe'
+  puts 'halting.......'
+  puts 'halted'
+  exit 1
 end
 FileUtils.touch('info.log')
 Helper.help if ARGV[0] == 'help'
