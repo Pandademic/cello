@@ -60,7 +60,9 @@ module Pkg
     puts data['Release']
     @RURL = data['Release']
     system("wget #{@RURL}")
-    # rescue
+    rescue Errno::ENOENT
+      puts "This is not a url"
+      exit 1
     # abort("an error ocured")
     # exit 1
   end
