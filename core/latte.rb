@@ -1,11 +1,11 @@
 # frozen_string_literal: true
-
 require 'down'
 require 'inifile'
 require 'open-uri'
 require 'facter'
 $os = Facter['osfamily'].value
 puts "you are on #{$os}"
+
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
 module Helper
@@ -35,17 +35,13 @@ module Pkg
     puts "Getting #{@query}"
     $query = @query
     Pkg.getPkgfile
-
-    # puts "sourceUrl:#{@source}"
   end
 
   def self.getPkgfile
     $packageFileread = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
     $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
     puts "Package file:#{$packageFileread}"
-    # FileUtils.mkdir('tmp', force: true)
     system("wget #{$packageFileURL} --directory-prefix=/tmp/")
-    # "wget #{$packageFileURL}"
     puts 'package file download complete'
     Pkg.downloadLatest
     # TODO: implement begin.resuce,else,ensure,end
@@ -62,8 +58,6 @@ module Pkg
   rescue Errno::ENOENT
     puts 'This is not a url'
     exit 1
-    # abort("an error ocured")
-    # exit 1
   end
 end
 FileUtils.touch('info.log')
