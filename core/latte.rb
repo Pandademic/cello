@@ -6,13 +6,13 @@ require 'open-uri'
 require 'facter'
 $os = Facter['osfamily'].value
 puts "you are on #{$os}"
-
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
 module Helper
   def self.help
     puts 'Latte help sytem'
     puts "To install a image from a url try latte InstallImage 'url of image' "
+    puts "to install a package you can do latte install 'pkg name'"
   end
 end
 
