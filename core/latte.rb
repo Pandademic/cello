@@ -20,11 +20,11 @@ end
 module Image
   def self.main(url)
     $SAFE = 4
-    rescue SecurityError => e
-      puts 'operation is not safe'
-      puts 'halting.......'
-      puts 'halted'
-      exit 0
+  rescue SecurityError => e
+    puts 'operation is not safe'
+    puts 'halting.......'
+    puts 'halted'
+    exit 0
     @url = url
     if @url.to_s == ''
       abort('This URL is non-existent')
