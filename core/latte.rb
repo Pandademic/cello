@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-require 'down'
+# frozen_string_literal
 require 'inifile'
 require 'open-uri'
 require 'facter'
@@ -15,26 +13,6 @@ module Helper
     puts "to install a package you can do latte install 'pkg name'"
   end
 end
-
-# module to download Images
-module Image
-  def self.main(url)
-    $SAFE = 4
-  rescue SecurityError => e
-    puts 'operation is not safe'
-    puts 'halting.......'
-    puts 'halted'
-    exit 0
-    @url = url
-    if @url.to_s == ''
-      abort('This URL is non-existent')
-    else
-      File.open('info.log', 'w') { |f| f.write "#{Time.now} - img -Image download started\n" }
-      Down.download(@url.to_s, destination: 'cups/WithUrl/')
-    end
-  end
-end
-
 # module to download Packages
 module Pkg
   def self.findPkg(query)
@@ -63,6 +41,7 @@ module Pkg
     puts data['Release']
     @RURL = data['Release']
     system("wget #{@RURL}")
+  #HACK: This will never be called (below)
   rescue Errno::ENOENT
     puts 'This is not a url'
     exit 1
