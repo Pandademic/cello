@@ -13,6 +13,7 @@ module Helper
     puts "to install a package you can do latte install 'pkg name'"
   end
 end
+
 # module to download Packages
 module Pkg
   def self.findPkg(query)
@@ -41,7 +42,7 @@ module Pkg
     puts data['Release']
     @RURL = data['Release']
     system("wget #{@RURL}")
-  #HACK: This will never be called (below)
+  # HACK: This will never be called (below)
   rescue Errno::ENOENT
     puts 'This is not a url'
     exit 1
