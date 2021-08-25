@@ -47,6 +47,21 @@ module Pkg
     exit 1
   end
 end
+module Osauth()
+  def auth
+    osinfo=Pkg::file['Osinfo']
+    puts 'supported oss'
+    if(osinfo['windows-support']==true)
+      puts 'windows'
+    end
+    if(osinfo['osx-support']==true)
+      puts 'macos'
+    end
+    if(osinfo['linux-support']==true)
+      puts 'linux'
+    end
+  end
+end
 FileUtils.touch('info.log')
 Helper.help if ARGV[0] == 'help'
 @param1 = ARGV[1]
