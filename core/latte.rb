@@ -32,15 +32,16 @@ module Pkg
     puts 'package file download complete'
     Pkg.downloadLatest
     # TODO: implement begin.resuce,else,ensure,end
+    # TODO: changes global vars to :: scopes
   end
 
   def self.downloadLatest
-    file = IniFile.load("/tmp/#{$query}.ini")
+    Pkg::file = IniFile.load("/tmp/#{$query}.ini")
     puts 'loaded file'
-    data = file['package']
+    Pkg::data = file['package']
     puts 'Release URL:'
-    puts data['Release']
-    @RURL = data['Release']
+    puts Pkg::data['Release']
+    @RURL = Pkg::data['Release']
     system("wget #{@RURL}")
   # HACK: This will never be called (below)
   rescue Errno::ENOENT
