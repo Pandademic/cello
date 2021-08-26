@@ -36,12 +36,12 @@ module Pkg
   end
 
   def self.downloadLatest
-    Pkg::file = IniFile.load("/tmp/#{$query}.ini")
+    $file = IniFile.load("/tmp/#{$query}.ini")
     puts 'loaded file'
-    Pkg::data = file['package']
+    $data = file['package']
     puts 'Release URL:'
-    puts Pkg::data['Release']
-    @RURL = Pkg::data['Release']
+    puts $data['Release']
+    @RURL = $data['Release']
     system("wget #{@RURL}")
   # HACK: This will never be called (below)
   rescue Errno::ENOENT
@@ -51,7 +51,7 @@ module Pkg
 end
 module Osauth()
   def auth
-    osinfo=Pkg::file['Osinfo']
+    osinfo=$file['Osinfo']
     puts 'supported oss'
     if(osinfo['windows-support']==true)
       puts 'windows'
