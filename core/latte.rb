@@ -49,7 +49,7 @@ module Pkg
     exit 1
   end
 end
-module Osauth()
+module Osauth
   def auth
     osinfo=$file['Osinfo']
     puts 'supported oss'
