@@ -36,7 +36,7 @@ module Pkg
   end
 
   def self.downloadLatest
-    $file = IniFile.load("/tmp/#{$query}.ini")
+    file = IniFile.load("/tmp/#{$query}.ini")
     puts 'loaded file'
     $data = file['package']
     puts 'Release URL:'
