@@ -49,19 +49,14 @@ module Pkg
     exit 1
   end
 end
+
 module Osauth
   def auth
-    osinfo=$file['Osinfo']
+    osinfo = $file['Osinfo']
     puts 'supported oss'
-    if(osinfo['windows-support']==true)
-      puts 'windows'
-    end
-    if(osinfo['osx-support']==true)
-      puts 'macos'
-    end
-    if(osinfo['linux-support']==true)
-      puts 'linux'
-    end
+    puts 'windows' if osinfo['windows-support'] == true
+    puts 'macos' if osinfo['osx-support'] == true
+    puts 'linux' if osinfo['linux-support'] == true
   end
 end
 FileUtils.touch('info.log')
