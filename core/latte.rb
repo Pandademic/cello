@@ -59,7 +59,7 @@ module Osauth
     puts 'linux' if osinfo['linux-support'] == true
   end
 end
-FileUtils.touch('info.log')
+#FileUtils.touch('info.log')
 Helper.help if ARGV[0] == 'help'
 @param1 = ARGV[1]
 Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
