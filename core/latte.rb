@@ -7,10 +7,9 @@ puts "you are on #{$os}"
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
 module Helper
-  def self.help
-    puts 'Latte help sytem'
-    puts "To install a image from a url try latte InstallImage 'url of image' "
-    puts "to install a package you can do latte install 'pkg name'"
+  def self.man
+     doc=URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/docs/manpages/#@param1.text").read
+     puts "#{doc}"
   end
 end
 
@@ -60,6 +59,6 @@ module Osauth
   end
 end
 # FileUtils.touch('info.log')
-Helper.help if ARGV[0] == 'help'
 @param1 = ARGV[1]
+Helper.man if ARGV[0] == 'man'
 Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'

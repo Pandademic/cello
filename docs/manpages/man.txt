@@ -1,3 +1,7 @@
+
+Man is the Linux command to  get a manual about something.
+Similarly The latte 'man' command gets a manual about a command.
+You did 'latte man man' to get to this page.
 Man is the Linux command to  get a manual about something.
 Similarly The latte 'man' command gets a manual about a command.
 You did 'latte man man' to get to this page.
