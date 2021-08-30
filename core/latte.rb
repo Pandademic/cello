@@ -8,7 +8,7 @@ abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
 module Helper
   def self.man
-    doc = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/docs/manpages/#@param1.txt").read
+    doc = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/docs/manpages/#{@param1}.txt").read
 
     puts doc.to_s
   end
