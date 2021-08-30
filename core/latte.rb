@@ -60,5 +60,5 @@ module Osauth
 end
 # FileUtils.touch('info.log')
 @param1 = ARGV[1]
-
+Helper.man if ARGV[0] == 'man'
 Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
