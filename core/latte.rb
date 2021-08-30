@@ -59,7 +59,6 @@ module Osauth
   end
 end
 # FileUtils.touch('info.log')
-Helper.help if ARGV[0] == 'help'
 @param1 = ARGV[1]
 
 Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
