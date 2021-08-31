@@ -2,7 +2,7 @@
 require 'inifile'
 require 'open-uri'
 require 'facter'
-# TODO:bring back helper
+# TODO: bring back helper
 # module to download Packages
 module Pkg
   def self.findPkg(query)
