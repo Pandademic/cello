@@ -2,10 +2,6 @@
 require 'inifile'
 require 'open-uri'
 require 'facter'
-$os = Facter['osfamily'].value
-puts "you are on #{$os}"
-abort('ERROR:No task specified') while ARGV.empty?
-# Module to Provide help service
 # TODO:bring back helper
 # module to download Packages
 module Pkg
@@ -18,9 +14,9 @@ module Pkg
 
   def self.getPkgfile
   ensure
-    $packageFileread = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
+    $pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
     $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
-    puts "Package file:#{$packageFileread}"
+    puts "Package file:#{$pfr}"
     system("wget #{$packageFileURL} --directory-prefix=/tmp/")
     puts 'package file download complete'
     Pkg.downloadLatest
@@ -31,24 +27,16 @@ module Pkg
   def self.downloadLatest
     file = IniFile.load("/tmp/#{$query}.ini")
     puts 'loaded file'
-    $data = file['package']
+    $pkgdata = file['package']
     puts 'Release URL:'
-    puts $data['Release']
-    @RURL = $data['Release']
+    puts $pkgdata['Release']
+    @RURL = $pkgdata['Release']
     system("wget #{@RURL}")
-  end
-end
-
-module Osauth
-  def auth
-    osinfo = $file['Osinfo']
-    puts 'supported oss'
-    puts 'windows' if osinfo['windows-support'] == true
-    puts 'macos' if osinfo['osx-support'] == true
-    puts 'linux' if osinfo['linux-support'] == true
   end
 end
 # FileUtils.touch('info.log')
 @param1 = ARGV[1]
+$os = Facter['osfamily'].value
+abort('ERROR:No task specified') while ARGV.empty?
 Helper.man if ARGV[0] == 'man'
 Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
