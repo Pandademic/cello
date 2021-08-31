@@ -6,14 +6,7 @@ $os = Facter['osfamily'].value
 puts "you are on #{$os}"
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
-module Helper
-  def self.man
-    doc = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/docs/manpages/#{@param1}.txt").read
-
-    puts doc.to_s
-  end
-end
-
+#TODO:bring back helper
 # module to download Packages
 module Pkg
   def self.findPkg(query)
