@@ -36,10 +36,6 @@ module Pkg
     puts $data['Release']
     @RURL = $data['Release']
     system("wget #{@RURL}")
-  # HACK: This will never be called (below)
-  rescue Errno::ENOENT
-    puts 'This is not a url'
-    exit 1
   end
 end
 
