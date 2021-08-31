@@ -6,7 +6,7 @@ $os = Facter['osfamily'].value
 puts "you are on #{$os}"
 abort('ERROR:No task specified') while ARGV.empty?
 # Module to Provide help service
-#TODO:bring back helper
+# TODO:bring back helper
 # module to download Packages
 module Pkg
   def self.findPkg(query)
