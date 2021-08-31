@@ -30,8 +30,15 @@ module Pkg
     $pkgdata = file['package']
     puts 'Release URL:'
     puts $pkgdata['Release']
-    @RURL = $pkgdata['Release']
-    system("wget #{@RURL}")
+    $zipsupport=$pkgdata['Zip']
+    if($zipsupport=true)
+      # TODO: #13 add zipsupport to docs (package-example.ini)
+      @RURL = $pkgdata['Release']
+      system("wget #{@RURL}")
+    else
+      @ISC=$pkgdata['Isc']# install command
+      system("#@ISC")   
+    end
   end
 end
 # FileUtils.touch('info.log')
