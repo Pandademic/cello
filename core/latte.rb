@@ -27,15 +27,15 @@ module Pkg
     file = IniFile.load("/tmp/#{$query}.ini")
     puts 'loaded file'
     pkgdata = file['package']
-    puts 'Release URL:'
-    puts pkgdata['Release']
     zipsupport = pkgdata['Zip']
     if zipsupport == true
       # TODO: #13 add zipsupport to docs (package-example.ini)
       @RURL = pkgdata['Release']
+      puts 'Running zip downloadd with wget'
       system("wget #{@RURL}")
     else
       @ISC = pkgdata['Isc'] # install command
+      puts 'running Install command as specified in Pkgfile'
       system(@ISC.to_s)
     end
   end
