@@ -6,18 +6,17 @@ require 'facter'
 # module to download Packages
 module Pkg
   def self.findPkg(query)
-    @query = query
-    puts "Getting #{@query}"
-    $query = @query
+    $query = query
+    puts "Getting #{$query}"
     Pkg.getPkgfile
   end
 
   def self.getPkgfile
   ensure
-    $pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
-    $packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
-    puts "Package file:#{$pfr}"
-    system("wget #{$packageFileURL} --directory-prefix=/tmp/")
+    pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
+    packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
+    puts "Package file:#{pfr}"
+    system("wget #{packageFileURL} --directory-prefix=/tmp/")
     puts 'package file download complete'
     Pkg.downloadLatest
     # TODO: implement begin.resuce,else,ensure,end
@@ -27,11 +26,18 @@ module Pkg
   def self.downloadLatest
     file = IniFile.load("/tmp/#{$query}.ini")
     puts 'loaded file'
-    $pkgdata = file['package']
+    pkgdata = file['package']
     puts 'Release URL:'
-    puts $pkgdata['Release']
-    @RURL = $pkgdata['Release']
-    system("wget #{@RURL}")
+    puts pkgdata['Release']
+    zipsupport = pkgdata['Zip']
+    if zipsupport == true
+      # TODO: #13 add zipsupport to docs (package-example.ini)
+      @RURL = pkgdata['Release']
+      system("wget #{@RURL}")
+    else
+      @ISC = pkgdata['Isc'] # install command
+      system(@ISC.to_s)
+    end
   end
 end
 # FileUtils.touch('info.log')
