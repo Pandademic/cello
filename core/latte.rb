@@ -30,7 +30,7 @@ module Pkg
     puts 'Release URL:'
     puts pkgdata['Release']
     zipsupport = pkgdata['Zip']
-    if (zipsupport == true)
+    if zipsupport == true
       # TODO: #13 add zipsupport to docs (package-example.ini)
       @RURL = pkgdata['Release']
       system("wget #{@RURL}")
