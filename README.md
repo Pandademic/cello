@@ -19,7 +19,7 @@ Latte is a Open source MIT licenced Package management system.It works by take t
  - a Release file such as latte in the latte-production 0.2.0 .zip *it is recomended to use the latest zip*
  - wget
  - git for version 0.2.1 or higher
- - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.txt">Read why</a>
+ - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
  ## Actual Install
  ___
  ## Linux:
