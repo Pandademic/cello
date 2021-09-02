@@ -11,4 +11,4 @@ and add :
 alias latte = "ruby ~/latte"
 ```
 
-** REMEMBER TO DOWN LOAD YOUR LATTE FILE TO THE HOME DIRECTORY ,EX: C://user/you/latte **
+**REMEMBER TO DOWN LOAD YOUR LATTE FILE TO THE HOME DIRECTORY ,EX: C://user/you/latte**
