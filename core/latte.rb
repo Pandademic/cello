@@ -36,7 +36,7 @@ module Pkg
     else
       $isc = pkgdata['Isc'] # install command
       puts 'running Install command as specified in Pkgfile'
-      puts 'this is the install command #{$isc} '
+      puts "this is the install command #{$isc} "
       system(@ISC.to_s)
     end
   end
