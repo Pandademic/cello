@@ -36,6 +36,7 @@ module Pkg
     else
       @ISC = pkgdata['Isc'] # install command
       puts 'running Install command as specified in Pkgfile'
+      puts 'this is the install command #@ISC"
       system(@ISC.to_s)
     end
   end
