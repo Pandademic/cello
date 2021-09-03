@@ -1,15 +1,15 @@
-version: 1
-update_configs:
+version: 1        
+update_configs:          
   # Update your Gemfile (& lockfiles) as soon as
   # new versions are published to the RubyGems registry
-  - package_manager: "ruby:bundler"
+  - package_manager: "ruby:bundler"              
     directory: "/"
-    update_schedule: "live"
+    update_schedule: "live"                        
 
     # Apply default reviewer and label to created
     # pull requests
     default_reviewers:
-      - "Pandademic"
+      - "Pandademic"              
     default_labels:
-      - "deps"
-      - "dependencies"
+      - "deps"                
+      - "dependencies"        
