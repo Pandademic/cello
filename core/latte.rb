@@ -34,9 +34,9 @@ module Pkg
       puts 'Running zip downloadd with wget'
       system("wget #{@RURL}")
     else
-      @ISC = pkgdata['Isc'] # install command
+      $isc = pkgdata['Isc'] # install command
       puts 'running Install command as specified in Pkgfile'
-      puts 'this is the install command #@ISC '
+      puts 'this is the install command #{$isc} '
       system(@ISC.to_s)
     end
   end
