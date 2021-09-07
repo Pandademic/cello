@@ -1,61 +1,49 @@
-# frozen_string_literal: true
-
-$destination = ''
-$query = ''
-require 'down'
+# frozen_string_literal
 require 'inifile'
-require 'fileutils'
 require 'open-uri'
-# require 'net/http'
-# require 'uri'
 require 'facter'
-# require 'bundler'
-# Bundler.require(:default)
-abort('ERROR:No task specified') while ARGV.empty?
-# Module to Provide help service
-module Helper
-  def self.help
-    puts 'Latte help sytem'
-    puts "To install a image from a url try latte InstallImage 'url of image' "
-  end
-end
-
-# module to download Images
-module Image
-  def self.main(url)
-    @url = url
-    if @url.to_s == ''
-      abort('This URL is non-existent')
-    else
-      File.open('info.log', 'w') { |f| f.write "#{Time.now} - img -Image download started\n" }
-      Down.download(@url.to_s, destination: 'cups/WithUrl/')
-    end
-  end
-end
-
+# TODO: bring back helper
 # module to download Packages
 module Pkg
   def self.findPkg(query)
-    @query = query
-    puts "Getting #{@query}"
-    $query = @query
+    $query = query
+    puts "Getting #{$query}"
     Pkg.getPkgfile
-
-    # puts "sourceUrl:#{@source}"
   end
-  def self.getPkgfile()
-      $packageFile=open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#$query.ini").read
-      puts "Package file:/n #$packageFile" 
-      system("wget #$packageFile")
-      file=IniFile.load("#{$packageFile}.ini")
-      data=file['package']
-      puts "relase zip:"
-      puts data['Release']
-      $r=data['Release']
-      system("wget #$r")
+
+  def self.getPkgfile
+  ensure
+    pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
+    packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
+    puts "Package file:#{pfr}"
+    system("wget #{packageFileURL} --directory-prefix=/tmp/")
+    puts 'package file download complete'
+    Pkg.downloadLatest
+    # TODO: implement begin.resuce,else,ensure,end
+    # TODO: changes global vars to :: scopes
+  end
+
+  def self.downloadLatest
+    file = IniFile.load("/tmp/#{$query}.ini")
+    puts 'loaded file'
+    pkgdata = file['package']
+    zipsupport = pkgdata['Zip']
+    if zipsupport == true
+      # TODO: #13 add zipsupport to docs (package-example.ini)
+      @RURL = pkgdata['Release']
+      puts 'Running zip downloadd with wget'
+      system("wget #{@RURL}")
+    else
+      $isc = pkgdata['Isc'] # install command
+      puts 'running Install command as specified in Pkgfile'
+      puts $isc.to_s
+      system(@ISC.to_s)
+    end
   end
 end
-FileUtils.touch('info.log')
-Helper.help if ARGV[0] == 'help'
+# FileUtils.touch('info.log')
 @param1 = ARGV[1]
+$os = Facter['osfamily'].value
+abort('ERROR:No task specified') while ARGV.empty?
+Helper.man if ARGV[0] == 'man'
 Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
