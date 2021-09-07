@@ -6,7 +6,7 @@
 [![Ruby 2.6 CI](https://github.com/Pandademic/Latte/actions/workflows/2.6ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/2.6ci.yml)
 [![Ruby 2.7 CI](https://github.com/Pandademic/Latte/actions/workflows/2.7.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/2.7.yml)
 [![Ruby 3.0 CI](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml)
-![Last release](https://img.shields.io/badge/Last%20release%3A-0.2.0-orange)
+![Last release](https://img.shields.io/badge/Last%20release%3A-0.1.0-orange)
 ---
 
 Latte is a Open source MIT licenced Package management system.It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip/tar.gz. 
@@ -16,11 +16,23 @@ Latte is a Open source MIT licenced Package management system.It works by take t
  ## Prerequisites
  ____
  - ruby 2.6 or higher
- - a Release file such as latte in the latte-production 0.2.0 .zip *it is recomended to use the latest zip*
+ - a Release file such as latte in the latte-production 0.2.0 .zip **IF USING METHOD 3 ** *it is recomended to use the latest zip*
  - wget
  - git for version 0.2.1 or higher
  - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
- ## Actual Install
+ ## METHOD 1
+ ------
+ ``` sh
+ curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
+ ```
+ ## METHOD 2
+ -----
+ ``` sh
+wget https://raw.githubusercontent.com/Pandademic/Latte/production/latte
+ ```
+ ## METHOD 3
+ -----
+ download and extract the production zip. Delete everything but the file Latte & and the docs folder(ONLY IF YOU WANT TO KEEP THE DOCS)
  ___
  ## Linux:
  ____
