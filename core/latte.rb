@@ -45,5 +45,6 @@ end
 @param1 = ARGV[1]
 $os = Facter['osfamily'].value
 abort('ERROR:No task specified') while ARGV.empty?
-Helper.man if ARGV[0] == 'man'
+#Helper.man if ARGV[0] == 'man'
+Pkg.findPkg(@param1.to_s) if ARGV[0] == 'add'
 Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
