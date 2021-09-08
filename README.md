@@ -20,19 +20,11 @@ Latte is a Open source MIT licenced Package management system.It works by take t
  - wget
  - git for version 0.2.1 or higher
  - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
- ## METHOD 1
- ------
- ``` sh
- curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
- ```
- ## METHOD 2
- -----
+ ## INSTALL 
  ``` sh
 wget https://raw.githubusercontent.com/Pandademic/Latte/production/latte
  ```
- ## METHOD 3
- -----
- download and extract the production zip. Delete everything but the file Latte & and the docs folder(ONLY IF YOU WANT TO KEEP THE DOCS)
+<a href="https://github.com/Pandademic/Latte/wiki/Installation">CLICK HERE FOR MORE METHODS</a>
  ___
  ## Linux:
  ____
