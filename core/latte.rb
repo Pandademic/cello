@@ -13,8 +13,8 @@ module Pkg
 
   def self.getPkgfile
   ensure
-    pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini").read
-    packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/packages/#{$query}.ini"
+    pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini").read
+    packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
     puts "Package file:#{pfr}"
     system("wget #{packageFileURL} --directory-prefix=/tmp/")
     puts 'package file download complete'
@@ -36,8 +36,8 @@ module Pkg
     else
       @Isc = pkgdata['InstallCommand'] # install command
       puts 'running Install command as specified in Pkgfile'
-      puts "DEBUG-ISC: #{@Isc}"
-      puts @Isc.to_s
+      #puts "DEBUG-ISC: #{@Isc}"
+      #puts @Isc.to_s
       system(@Isc.to_s)
     end
   end
