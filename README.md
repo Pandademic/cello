@@ -9,7 +9,7 @@
 ![Last release](https://img.shields.io/badge/Last%20release%3A-0.1.0-orange)
 ---
 
-Latte is a Open source MIT licenced Package management system.It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip/tar.gz. 
+Latte is a Open source MIT licenced Package management system. It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip/tar.gz. 
 
 # Install
 - - -
