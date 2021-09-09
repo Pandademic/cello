@@ -34,11 +34,11 @@ module Pkg
       puts 'Running zip downloadd with wget'
       system("wget #{@RURL}")
     else
-      @Isc = pkgdata['Isc'] # install command
+      @Isc = pkgdata['InstallCommand'] # install command
       puts 'running Install command as specified in Pkgfile'
       puts "DEBUG-ISC: #{@Isc}"
       puts @Isc.to_s
-      system("echo 'hello world' && exit 1")
+      system(@Isc.to_s)
     end
   end
 end
