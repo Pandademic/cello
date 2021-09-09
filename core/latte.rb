@@ -34,7 +34,7 @@ module Pkg
       puts 'Running zip downloadd with wget'
       system("wget #{@RURL}")
     else
-     @Isc = pkgdata['Isc'] # install command
+     @Isc ='DOOP SHE DOOP SHE DOOP' #pkgdata['Isc'] # install command
       puts 'running Install command as specified in Pkgfile'
       puts "DEBUG: ISC #{@Isc}"
       puts @Isc.to_s
