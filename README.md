@@ -18,7 +18,7 @@ Latte is a Open source MIT licenced Package management system. It works by take 
  - ruby 2.6 or higher
  - a Release file such as latte in the latte-production 0.2.0 .zip **IF USING METHOD 3 ** *it is recomended to use the latest zip*
  - wget
- - git for version 0.2.1 or higher
+ - git for version 0.2.1-dev or higher
  - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
  ## INSTALL 
  ``` sh
