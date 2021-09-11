@@ -10,21 +10,22 @@
 ![GitHub issues](https://img.shields.io/github/issues/Pandademic/latte?style=plastic)
 ---
 
-Latte is a Open source MIT licenced Package management system. It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip/tar.gz. 
+Latte is a Open source MIT licenced Package management system. It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip or tarball  
 
 # Install
 - - -
  ## Prerequisites
  ____
  - ruby 2.6 or higher
- - a Release file such as latte in the latte-production 0.2.0 .zip **IF USING METHOD 3 ** *it is recomended to use the latest zip*
+ - a Release file such as latte in the latte-production 0.2.0 .zip  **  ⚠️ You must use 0.2.0 or higher. There is no backwards compatibilty anymore! ⚠️**
  - wget
- - git for version 0.2.1-dev or higher
+ <!--- git for version 0.2.1-dev or higher -->
  - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
  ## INSTALL 
  ``` sh
 wget https://raw.githubusercontent.com/Pandademic/Latte/production/latte
  ```
+
 <a href="https://github.com/Pandademic/Latte/wiki/Installation">CLICK HERE FOR MORE METHODS</a>
  ___
  ## Linux:
