@@ -16,7 +16,7 @@ module Pkg
     pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini").read
     packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
     puts "Package file:#{pfr}"
-    system("wget #{packageFileURL} --directory-prefix=/tmp/")
+    system("curl -O #{packageFileURL} --directory-prefix=/tmp/")
     puts 'package file download complete'
     Pkg.downloadLatest
     # TODO: implement begin.resuce,else,ensure,end
@@ -31,8 +31,8 @@ module Pkg
     if zipsupport == true
       # TODO: #13 add zipsupport to docs (package-example.ini)
       @RURL = pkgdata['Release']
-      puts 'Running zip downloadd with wget'
-      system("wget #{@RURL}")
+      puts 'Running zip download with curl'
+      system("curl -O #{@RURL}")
     else
       @Isc = pkgdata['InstallCommand'] # install command
       puts 'running Install command as specified in Pkgfile'
