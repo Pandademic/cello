@@ -40,7 +40,10 @@ wget https://raw.githubusercontent.com/Pandademic/Latte/production/latte
  bundle install
  ```
  to install dependencies
- - You should now be able to use Latte
+ - You should now be able to use Latte. I recomend doing
+```
+latte add getting-started
+```
 
 # Creating a package
 __________
