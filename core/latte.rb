@@ -16,7 +16,8 @@ module Pkg
     pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini").read
     packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
     puts "Package file:#{pfr}"
-    system("curl -O #{packageFileURL} --directory-prefix=/tmp/")
+
+    system("curl --create-dirs -O #{packageFileURL} --output-dir /tmp/")
     puts 'package file download complete'
     Pkg.downloadLatest
     # TODO: implement begin.resuce,else,ensure,end
