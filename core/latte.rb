@@ -17,7 +17,7 @@ module Pkg
     packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
     puts "Package file:#{pfr}"
 
-    system("curl  -O #{packageFileURL} --output-dir /tmp/")
+    system("curl  -O #{packageFileURL}")
     puts 'package file download complete'
     Pkg.downloadLatest
     # TODO: implement begin.resuce,else,ensure,end
@@ -25,7 +25,7 @@ module Pkg
   end
 
   def self.downloadLatest
-    file = IniFile.load("/tmp/#{$query}.ini")
+    file = IniFile.load("#{$query}.ini")
     puts 'loaded file'
     pkgdata = file['package']
     zipsupport = pkgdata['Zip']
