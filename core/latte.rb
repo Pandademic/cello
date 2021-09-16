@@ -12,8 +12,9 @@ module Pkg
   end
 
   def self.getPkgfile
-  rescue OpenURI::HTTPError
-    puts 'this package does not exist'
+    rescue OpenURI::HTTPError
+      puts 'this package does not exist'
+    end
     pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini").read
     packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
     puts "Package file:#{pfr}"
