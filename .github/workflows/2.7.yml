@@ -1,4 +1,4 @@
-name: Ruby 2.7 CI
+name: Ruby 3.0 CI
 on: [push, pull_request]
 jobs:
   test:
@@ -7,13 +7,16 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7 # Not needed with a .ruby-version file
+        ruby-version: 3.0 # Not needed with a .ruby-version file
         #bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: bundle lock --add-platform x86_64-linux
     - run: bundle install
     - run: alias latte="ruby latte"
     #- run: ruby core/latte.rb help
+    - run: curl --version
     - run: ruby core/latte.rb installImg 'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/22130127/Pug-puppy-standing-in-profile-on-a-white-background.jpg'
     - run: ruby core/latte.rb install brew-source
-    - run: ruby core/latte.rb install brew
+    - run: ruby core/latte.rb install gettting-started
+    #- run: brew install ahoy external brew test (https://formulae.brew.sh/formula-linux/ahoy)[Unrelated] was used for testing commit 2671fe5 for finishing of bug #15 for release v0.2.0
+
 

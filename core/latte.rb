@@ -31,7 +31,7 @@ module Pkg
       system("curl -O #{@RURL}")
     else
       @Isc = pkgdata['InstallCommand'] # install command
-      system(@Isc.to_s)
+      system @Isc.to_s
     end
   end
 end
@@ -39,5 +39,11 @@ end
 $os = Facter['osfamily'].value
 abort('That is not a command') while ARGV.empty?
 # Helper.man if ARGV[0] == 'man'
-Pkg.findPkg(@param1.to_s) if ARGV[0] == 'add'
-Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
+#Pkg.findPkg(@param1.to_s) if ARGV[0] == 'add'
+#Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
+if ARGV[0] == 'add'
+  Pkg.findPkg @param1.to_s
+elsif
+  Pkg.findPkg @param1.to_s
+else
+  puts 'Unknown Command'
