@@ -8,6 +8,8 @@
 [![Ruby 3.0 CI](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml)
 ![Last release](https://img.shields.io/badge/Last%20release%3A-0.3.0-orange)
 ![GitHub issues](https://img.shields.io/github/issues/Pandademic/latte?style=plastic)
+[![Depfu](https://badges.depfu.com/badges/3aef7c1603f63a6745f347346aef53fa/count.svg)](https://depfu.com/github/Pandademic/Latte?project_id=31718)
+
 ---
 
 Latte is a Open source MIT licenced Package management system. It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip or tarball  
