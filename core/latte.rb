@@ -47,3 +47,4 @@ elsif
   Pkg.findPkg @param1.to_s
 else
   puts 'Unknown Command'
+end
