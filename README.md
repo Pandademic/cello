@@ -6,7 +6,7 @@
 [![Ruby 2.6 CI](https://github.com/Pandademic/Latte/actions/workflows/2.6ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/2.6ci.yml)
 [![Ruby 2.7 CI](https://github.com/Pandademic/Latte/actions/workflows/2.7.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/2.7.yml)
 [![Ruby 3.0 CI](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml)
-![Last release](https://img.shields.io/badge/Last%20release%3A-0.2.0-orange)
+![Last release](https://img.shields.io/badge/Last%20release%3A-0.3.0-orange)
 ![GitHub issues](https://img.shields.io/github/issues/Pandademic/latte?style=plastic)
 ---
 
@@ -17,13 +17,13 @@ Latte is a Open source MIT licenced Package management system. It works by take 
  ## Prerequisites
  ____
  - ruby 2.6 or higher
- - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ You must use 0.2.0 or higher. There is no backwards compatibilty anymore! ⚠️**
+ - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ You must use 0.2.0 or higher. Anything under 0.2.0 is unsupported ⚠️**
  - curl
  <!--- git for version 0.2.1-dev or higher -->
  - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
  ## INSTALL 
  ``` sh
-wget https://raw.githubusercontent.com/Pandademic/Latte/production/latte
+curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
  ```
 
 <a href="https://github.com/Pandademic/Latte/wiki/Installation">CLICK HERE FOR MORE METHODS</a>
@@ -50,5 +50,5 @@ __________
 steps:
 - 1. Fork this repo
 - 2. Make a new github repo and do your coding there
-- 3. Then in the Fork of packages folder create a packageName.ini where packageName is your packages name.Then look at the package_example.ini in the docs to format the package.ini
+- 3. Then in the Fork of packages folder create a packageName.ini where packageName is your packages name.Then look at the <a href="https://github.com/Pandademic/Latte/blob/master/docs/package_example.ini">package_example.ini</a> in the docs to format the package.ini
 - 4. Push your changes in the fork to a pull request
