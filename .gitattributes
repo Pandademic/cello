@@ -1,2 +1,2 @@
 # Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
-.gitpod.yml linguist-language=Qmake
+ci/*.yml linguist-language= Other
