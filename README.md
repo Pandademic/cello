@@ -13,7 +13,7 @@
 
 ---
 
-Latte is a Open source MIT licenced Package management system. It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip or tarball  
+Latte is a Open source MIT licenced Package manager. It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip or tarball  
 
 # Install
 - - -
