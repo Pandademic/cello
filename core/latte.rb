@@ -25,9 +25,9 @@ module Pkg
     file = IniFile.load("#{$query}.ini")
     puts 'loaded file'
     pkgdata = file['package']
-    zipsupport = pkgdata['Zip']
+    zipsupport = pkgdata['Media']
     if zipsupport == true
-      @RURL = pkgdata['Release']
+      @RURL = pkgdata['MediaUrl']
       system("curl -O #{@RURL}")
     else
       @Isc = pkgdata['InstallCommand'] # install command
@@ -38,9 +38,6 @@ end
 @param1 = ARGV[1]
 #$os = Facter['osfamily'].value
 abort('That is not a command') while ARGV.empty?
-# Helper.man if ARGV[0] == 'man'
-# Pkg.findPkg(@param1.to_s) if ARGV[0] == 'add'
-# Pkg.findPkg(@param1.to_s) if ARGV[0] == 'install'
 if ARGV[0] == 'add'
   Pkg.findPkg @param1.to_s
 elsif Pkg.findPkg @param1.to_s
