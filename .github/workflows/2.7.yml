@@ -1,4 +1,4 @@
-name: Ruby 2.7 CI
+name: Ubuntu Ruby 2.7 CI
 on: [push, pull_request]
 jobs:
   test:
