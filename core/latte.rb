@@ -28,7 +28,7 @@ module Pkg
     zipsupport = pkgdata['Media']
     if zipsupport == true
       @RURL = pkgdata['MediaUrl']
-      system("curl -O #{@RURL}")
+      system "curl -O #{@RURL}"
     else
       @Isc = pkgdata['InstallCommand'] # install command
       system @Isc.to_s
