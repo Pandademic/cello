@@ -7,7 +7,7 @@
 [![Ruby 2.7 CI](https://github.com/Pandademic/Latte/actions/workflows/2.7.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/2.7.yml)
 [![Ruby 3.0 CI](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml)
 [![windows Ruby 2.6 CI](https://github.com/Pandademic/Latte/actions/workflows/win2-6ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/win2-6ci.yml)
-![Last release](https://img.shields.io/badge/Last%20release%3A-0.3.0-orange)
+![Last release](https://img.shields.io/badge/Last%20release%3A-0.3.1-orange)
 ![GitHub issues](https://img.shields.io/github/issues/Pandademic/latte?style=plastic)
 [![Depfu](https://badges.depfu.com/badges/3aef7c1603f63a6745f347346aef53fa/count.svg)](https://depfu.com/github/Pandademic/Latte?project_id=31718)
 [![Depfu](https://badges.depfu.com/badges/3aef7c1603f63a6745f347346aef53fa/overview.svg)](https://depfu.com/github/Pandademic/Latte?project_id=31718)
@@ -21,7 +21,7 @@ Latte is a Open source MIT licenced Package manager. It works by take the name o
  ## Prerequisites
  ____
  - ruby 2.6 or higher
- - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ You must use 0.2.0 or higher. Anything under 0.2.0 is unsupported ⚠️**
+ - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ You must use 0.3.1 or higher. Anything under 0.2.0 is unsupported ⚠️**
  - curl
  <!--- git for version 0.2.1-dev or higher -->
  - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
