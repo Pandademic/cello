@@ -14,14 +14,14 @@
 
 ---
 
-Latte is a Open source MIT licenced Package manager. It works by take the name of the package, finding its package.ini file and then getting the source code from the repo or the latest release zip or tarball  
+Latte , The Hackable , Mit , Cross Platform , Ruby Package Manager  
 
 # Install
 - - -
  ## Prerequisites
  ____
  - ruby 2.6 or higher
- - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ You must use 0.3.1 or higher. Anything under 0.3.0 is unsupported ⚠️**
+ - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ Only the latest version Is supported . The EOL for a old release is the date of a new relase ⚠️**
  - curl
  <!--- git for version 0.2.1-dev or higher -->
  - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
