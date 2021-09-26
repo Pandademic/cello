@@ -21,9 +21,9 @@ Latte , The Hackable , Open source , Cross Platform ,Package Manager.
  ## Prerequisites
  ____
  - ruby 2.6 or higher
- - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ Only the latest version Is supported . The EOL for a old release is the date of a new relase ⚠️**
+ - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ Only the latest version Is supported . The EOL for a old release is the date of a new release ,  Unless Expressly noted in the Release ⚠️**
  - curl
- - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
+ - git bash(windows only) <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
  ## INSTALL 
  ``` sh
 curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
@@ -33,7 +33,7 @@ curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
  ___
  ## Linux:
  ____
- - extract the file called latte(should be located in the dist folder of the source code) into your home directory
+ - extract the file called latte(should be located in the dist folder of the source code)& the gemfile into your home directory
  - in your ./bashrc or .zshrc or config.fish put 
   ``` sh
  alias latte ="ruby ~/latte" 
@@ -42,8 +42,9 @@ curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
  ``` sh
  bundle install
  ```
- to install dependencies
- - You should now be able to use Latte. We recomend doing
+ to install dependencies.
+ - Delete the gemfile
+ - You should now be able to use Latte. We recomend doing:
 ```
 latte add getting-started
 ```
