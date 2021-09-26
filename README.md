@@ -14,7 +14,7 @@
 
 ---
 
-Latte , The Hackable , Mit , Cross Platform , Ruby Package Manager  
+Latte , The Hackable , Open source , Cross Platform ,Package Manager.  
 
 # Install
 - - -
@@ -23,7 +23,6 @@ Latte , The Hackable , Mit , Cross Platform , Ruby Package Manager
  - ruby 2.6 or higher
  - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ Only the latest version Is supported . The EOL for a old release is the date of a new relase ⚠️**
  - curl
- <!--- git for version 0.2.1-dev or higher -->
  - git bash if you are on windows <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
  ## INSTALL 
  ``` sh
@@ -44,7 +43,7 @@ curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
  bundle install
  ```
  to install dependencies
- - You should now be able to use Latte. I recomend doing
+ - You should now be able to use Latte. We recomend doing
 ```
 latte add getting-started
 ```
