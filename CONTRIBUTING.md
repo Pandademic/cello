@@ -1,4 +1,5 @@
 First of all , Thank you for considering contributing to latte.
+<br>
 Here are some of the ways you can help out:
 - ✨ Report a issue
 - 🔨 fix a good first issue
