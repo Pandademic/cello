@@ -41,5 +41,5 @@ ____
     * :lock: `:lock:` when dealing with security
     * :arrow_up: `:arrow_up:` when upgrading dependencies
     * :arrow_down: `:arrow_down:` when downgrading dependencies
-    * :shirt: `:shirt:` when removing linter warnings
+    * :shirt: `:shirt:` when fixing linter warnings
 
