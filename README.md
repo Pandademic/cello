@@ -45,7 +45,7 @@ curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
  to install dependencies.
  - Delete the gemfile
  - You should now be able to use Latte. We recomend doing:
-```
+``` sh 
 latte add getting-started
 ```
 
