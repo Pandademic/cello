@@ -14,10 +14,10 @@ check if your latte is modified.
 
 # pull requests
 ____
-Make sure your pull adheres to the style guide(below)<!--<a href="">style guide</a>-->
+Make sure your pull adheres to the style guide(below)<!--<a href="https://github.com/Pandademic/Latte/CONTRUBUTING.md/#Style">style guide</a>-->
 
 
-# Style guides
+# Style 
 ____
 ### Git Commit Messages
 
