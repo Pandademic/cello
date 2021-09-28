@@ -43,4 +43,5 @@ ____
     * :arrow_down: `:arrow_down:` when downgrading dependencies
     * :shirt: `:shirt:` when fixing linter warnings
     * :bus: `:bus:` when adding a feature
+    * :gear: `:gear:` when changing configs
 
