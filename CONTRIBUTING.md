@@ -48,6 +48,7 @@ ____
     * :beers: `:beers:` when optimizing something
     * :busts_in_silhouette:`:busts_in_silhouette:` when adding contributers
     * 🔀 `:twisted_tightwards_arrows:`when merging
+    * 📦 `:package:` when doing something with packages
     * you can usually find a similar spec in `gitmoji.dev`
 ### Ruby style guide
 _____
