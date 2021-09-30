@@ -29,7 +29,7 @@ ____
 * When only changing documentation, include `[ci skip]` in the commit title
 * Consider starting the commit message with an applicable emoji:
     * :art: `:art:` when improving the format/structure of the code
-    * :racehorse: `:racehorse:` when improving performance
+    * :racehorse: `:zap:` when improving performance
     * :memo: `:memo:` when writing docs
     * :penguin: `:penguin:` when fixing something on Linux
     * :apple: `:apple:` when fixing something on macOS
@@ -44,4 +44,9 @@ ____
     * :shirt: `:shirt:` when fixing linter warnings
     * :bus: `:bus:` when adding a feature
     * :gear: `:gear:` when changing configs of anything
+    * :rocket: `:rocket:` whenlaunching a relase
+    * :beers: `:beers:` when optimizing something
+    * :busts_in_silhouette:`:busts_in_silhouette:` when adding contributers
+    * you can usually find a similar spec in `gitmoji.dev`
+    
 
