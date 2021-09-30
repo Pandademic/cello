@@ -49,5 +49,9 @@ ____
     * :busts_in_silhouette:`:busts_in_silhouette:` when adding contributers
     * 🔀 `:twisted_tightwards_arrows:`when merging
     * you can usually find a similar spec in `gitmoji.dev`
+### Ruby style guide
+_____
+     * use inline `if`/`else` when ever possible
+     * try not to use (brackets) when calling functions
 
 
