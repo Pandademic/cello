@@ -1,8 +1,6 @@
 # frozen_string_literal
 require 'inifile'
 require 'open-uri'
-# require 'facter'
-# TODO: bring back helper
 # module to download Packages
 module Pkg
   def self.findPkg(query)
@@ -36,8 +34,7 @@ module Pkg
   end
 end
 @param1 = ARGV[1]
-# $os = Facter['osfamily'].value
-abort('That is not a command') while ARGV.empty?
+abort 'That is not a command' while ARGV.empty?
 if ARGV[0] == 'add'
   Pkg.findPkg @param1.to_s
 elsif Pkg.findPkg @param1.to_s
