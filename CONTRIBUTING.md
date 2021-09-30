@@ -44,9 +44,10 @@ ____
     * :shirt: `:shirt:` when fixing linter warnings
     * :bus: `:bus:` when adding a feature
     * :gear: `:gear:` when changing configs of anything
-    * :rocket: `:rocket:` whenlaunching a relase
+    * :rocket: `:rocket:` when launching a relase
     * :beers: `:beers:` when optimizing something
     * :busts_in_silhouette:`:busts_in_silhouette:` when adding contributers
+    * 🔀 `:twisted_tightwards_arrows:`when merging
     * you can usually find a similar spec in `gitmoji.dev`
-    
+
 
