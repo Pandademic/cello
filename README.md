@@ -3,10 +3,6 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/pandademic/latte/badge)](https://www.codefactor.io/repository/github/pandademic/latte)
 <a href="https://gitpod.io/#github.com/Pandademic/Latte">![gitpod](https://img.shields.io/static/v1?label=Gitpod&message=Open%20in%20Gitpod&color=orange&logo=Gitpod)</a>
 <a href="https://github.dev/Pandademic/Latte">![gh web editor](https://img.shields.io/badge/github%20web%20editor-ready-green?logo=github)</a>
-[![Ruby 2.6 CI](https://github.com/Pandademic/Latte/actions/workflows/2.6ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/2.6ci.yml)
-[![Ruby 2.7 CI](https://github.com/Pandademic/Latte/actions/workflows/2.7.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/2.7.yml)
-[![Ruby 3.0 CI](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/3.0ci.yml)
-[![windows Ruby 2.6 CI](https://github.com/Pandademic/Latte/actions/workflows/win2-6ci.yml/badge.svg)](https://github.com/Pandademic/Latte/actions/workflows/win2-6ci.yml)
 ![Last release](https://img.shields.io/badge/Last%20release%3A-0.3.1-orange)
 ![GitHub issues](https://img.shields.io/github/issues/Pandademic/latte?style=plastic)
 [![Depfu](https://badges.depfu.com/badges/3aef7c1603f63a6745f347346aef53fa/count.svg)](https://depfu.com/github/Pandademic/Latte?project_id=31718)
@@ -24,12 +20,13 @@ Latte , The Hackable , Open source , Cross Platform ,Package Manager.
  - - -
  - ruby 2.6 or higher
  - latest production zip.:warning: **Nothing but the latest is supported**
+ - bundler gem
  
  - - -
  - extract the file called lattefile & the gemfile into your home directory
  - in your shells config (.bashrc , .zshrc , config.fish , ect.)
   ``` sh
- alias latte ="ruby ~/latte" 
+ alias latte ="ruby ~/lattefile" 
  ``` 
  - and then run 
  ``` sh
@@ -46,12 +43,12 @@ latte add getting-started
 ### prereqisites 
 ----
 - latte production zip.
-- euby 2.6 or higher
-- bundle
+- ruby 2.6 or higher
+- bundler gem
 - ---
 - in your shells config (.bashrc , .zshrc , config.fish , ect.)
   ``` sh
- alias latte ="ruby ~/latte" 
+ alias latte ="ruby ~/lattefile" 
  ``` 
  - and then run 
  ``` sh
@@ -68,11 +65,12 @@ latte add getting-started
 ### prereqisutes
 ----
 - ruby 2.6 or higher
-- lattezip
+- latte production zip
 - git bash or wsl
+- bundler gem
 ---
 if using wsl follow the steps for linux in the wsl terminal.
-else , follow the linux steps in the git bash
+else , follow the linux steps in the git bash.
 # Creating a package
 __________
 steps:
