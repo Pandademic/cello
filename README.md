@@ -24,10 +24,14 @@ Latte , The Hackable , Open source , Cross Platform ,Package Manager.
  
  - - -
  - extract the file called lattefile & the gemfile into your home directory
- - in your shells config (.bashrc , .zshrc , config.fish , ect.)
+ - in your .bashrc or .zshrc add:
   ``` sh
  alias latte ="ruby ~/lattefile" 
  ``` 
+ - if using fish , in your config.fish add:
+ ``` fish
+ alias latte "ruby ~/lattefile"
+ ```
  - and then run 
  ``` sh
  bundle install
