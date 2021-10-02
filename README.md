@@ -18,37 +18,61 @@ Latte , The Hackable , Open source , Cross Platform ,Package Manager.
 
 # Install
 - - -
- ## Prerequisites
- ____
- - ruby 2.6 or higher
- - a Release file such as latte in the latte-production 0.2.0 .zip  **⚠️ Only the latest version Is supported . The EOL for a old release is the date of a new release ,  Unless Expressly noted in the Release ⚠️**
- - curl
- - git bash(windows only) <a href="https://github.com/Pandademic/Latte/tree/master/docs/gbash.md">Read why</a>
- ## INSTALL 
- ``` sh
-curl -O https://raw.githubusercontent.com/Pandademic/Latte/production/latte
- ```
-
-<a href="https://github.com/Pandademic/Latte/wiki/Installation">CLICK HERE FOR MORE METHODS</a>
- ___
  ## Linux:
  ____
- - extract the file called latte(should be located in the dist folder of the source code)& the gemfile into your home directory
- - in your ./bashrc or .zshrc or config.fish put 
+ ### prerequisites
+ - - -
+ - ruby 2.6 or higher
+ - latest production zip.:warning: **Nothing but the latest is supported**
+ 
+ - - -
+ - extract the file called lattefile & the gemfile into your home directory
+ - in your shells config (.bashrc , .zshrc , config.fish , ect.)
   ``` sh
  alias latte ="ruby ~/latte" 
  ``` 
- - run 
+ - and then run 
  ``` sh
  bundle install
  ```
  to install dependencies.
  - Delete the gemfile
- - You should now be able to use Latte. We recomend doing:
+ - You should now be able to use Latte. Try:
 ``` sh 
 latte add getting-started
 ```
-
+## macos
+- - -
+### prereqisites 
+----
+- latte production zip.
+- euby 2.6 or higher
+- bundle
+- ---
+- in your shells config (.bashrc , .zshrc , config.fish , ect.)
+  ``` sh
+ alias latte ="ruby ~/latte" 
+ ``` 
+ - and then run 
+ ``` sh
+ bundle install
+ ```
+ to install dependencies.
+ - Delete the gemfile
+ - You should now be able to use Latte. Try:
+``` sh 
+latte add getting-started
+```
+## windows
+---
+### prereqisutes
+----
+- ruby 2.6 or higher
+- lattezip
+- git bash or wsl
+---
+if using wsl follow the steps for linux in the wsl terminal.
+else , follow the linux steps in the git bash
 # Creating a package
 __________
 steps:
