@@ -70,11 +70,15 @@ latte add getting-started
 ----
 - ruby 2.6 or higher
 - latte production zip
-- git bash or wsl
+- Latte.bat from the `/tools/install/` dir
 - bundler gem
 ---
-if using wsl follow the steps for linux in the wsl terminal.
-else , follow the linux steps in the git bash.
+- Extract the lattefile7 the gemfile into your home directory.
+- run ``sh
+bundle install
+``
+- delete the gemfile.
+- you should  be good to use latte!
 # Creating a package
 __________
 steps:
