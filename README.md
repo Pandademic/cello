@@ -15,11 +15,11 @@ Latte , The Hackable , Open source , Cross Platform ,Package Manager.
 # Features
 -----
 
-- ❇️ It's Small!
-- ❇️ Its Fast! (Mostly)
-- ❇️ It's Supported on Pretty much everything!
-- ❇️ For goodness sake , The README is bigger than the actual Package manager!
-- ❇️ More to come!
+- ✨ It's Small!
+- ✨ Its Fast! (Mostly)
+- ✨ It's Supported on Pretty much everything!
+- ✨ Oh for goodness sake , The README is bigger than the actual Package manager!
+- ✨ More to come!
 
 # Install
 - - -
