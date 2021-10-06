@@ -46,10 +46,11 @@ ____
     * :gear: `:gear:` when changing configs of anything
     * :rocket: `:rocket:` when launching a relase
     * :beers: `:beers:` when optimizing something
-    * :beer: `:beer: write code drunkenly
+    * :beer: `:beer:` write code drunkenly
     * :busts_in_silhouette:`:busts_in_silhouette:` when adding contributers
     * 🔀 `:twisted_tightwards_arrows:`when merging
     * 📦 `:package:` when doing something with packages
+    * 💾 `:floppy_disk:` when doing something with install
     * you can usually find a similar spec in `gitmoji.dev`
 ### Ruby style guide
 _____
