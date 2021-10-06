@@ -46,14 +46,15 @@ latte add getting-started
 - - -
 ### prereqisites 
 ----
-- latte production zip.
-- ruby 2.6 or higher
-- bundler gem
-- ---
-- in your shells config (.bashrc , .zshrc , config.fish , ect.)
+ - extract the file called lattefile & the gemfile into your home directory
+ - in your .bashrc or .zshrc add:
   ``` sh
  alias latte ="ruby ~/lattefile" 
  ``` 
+ - if using fish , in your config.fish add:
+ ``` fish
+ alias latte "ruby ~/lattefile"
+ ```
  - and then run 
  ``` sh
  bundle install
@@ -73,7 +74,7 @@ latte add getting-started
 - Latte.bat from the `/tools/install/` dir
 - bundler gem
 ---
-- Extract the lattefile7 the gemfile into your home directory.
+- Extract the lattefile & the gemfile into your home directory.
 - run ``sh
 bundle install
 ``
