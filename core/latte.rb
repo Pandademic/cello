@@ -6,7 +6,7 @@ require 'colorize'
 module Pkg
   def self.findPkg(query)
     $query = query
-    puts "Getting #{$query}"
+    puts "Getting #{$query}".colorize(:yellow)
     Pkg.getPkgfile
   end
 
@@ -16,7 +16,7 @@ module Pkg
     puts "Package file:#{pfr}"
     # implemnt no donwload of pkg file by using pfr
     system("curl  -O #{packageFileURL}")
-    puts 'package file download complete'.yellow
+    puts 'package file download complete'.colorize(:yellow)
     Pkg.downloadLatest
   end
 
@@ -28,6 +28,7 @@ module Pkg
     if zipsupport == true
       @RURL = pkgdata['MediaUrl']
       system "curl -O #{@RURL}"
+      puts "success!".colorize(:green)
     else
       @Isc = pkgdata['InstallCommand'] # install command
       system @Isc.to_s
@@ -40,5 +41,5 @@ if ARGV[0] == 'add'
   Pkg.findPkg @param1.to_s
 elsif Pkg.findPkg @param1.to_s
 else
-  puts 'Unknown Command'.red
+  puts 'Unknown Command'.colorize(:red)
 end
