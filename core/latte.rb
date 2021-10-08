@@ -36,10 +36,8 @@ module Pkg
   end
 end
 @param1 = ARGV[1]
-abort 'That is not a command' while ARGV.empty?
-if ARGV[0] == 'add'
+if @param1 == 'add'
   Pkg.findPkg @param1.to_s
-elsif Pkg.findPkg @param1.to_s
 else
   puts 'Unknown Command'.colorize(:red)
 end
