@@ -41,5 +41,5 @@ if @param1 == 'add'
   Pkg.findPkg @param1.to_s
 else
   puts 'Unknown Command' .colorize(:red)
-  exit 1
+  #exit 1
 end
