@@ -28,10 +28,11 @@ module Pkg
     if zipsupport == true
       @RURL = pkgdata['MediaUrl']
       system "curl -O #{@RURL}"
-      puts "success!".colorize(:green)
+      puts "#$query install success!".colorize(:green)
     else
       @Isc = pkgdata['InstallCommand'] # install command
       system @Isc.to_s
+      puts "#$query installed successfully".colorize(:green)
     end
   end
 end
@@ -39,5 +40,6 @@ end
 if @param1 == 'add'
   Pkg.findPkg @param1.to_s
 else
-  puts 'Unknown Command'.colorize(:red)
+  puts 'Unknown Command' .colorize(:red)
+  exit 1
 end
