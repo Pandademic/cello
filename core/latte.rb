@@ -37,9 +37,9 @@ module Pkg
   end
 end
 @param1 = ARGV[1]
-if @param1 == 'add'
+if ARGV[0] == 'add'
   Pkg.findPkg @param1.to_s
 else
   puts 'Unknown Command' .colorize(:red)
-  #exit 1
+  exit 1
 end
