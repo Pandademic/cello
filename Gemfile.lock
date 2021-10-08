@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    colorize (0.8.1)
     inifile (3.0.0)
     uri (0.10.1)
 
@@ -8,6 +9,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  colorize (~> 0.8.1)
   inifile
   uri
 
