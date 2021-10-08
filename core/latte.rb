@@ -1,6 +1,7 @@
 # frozen_string_literal
 require 'inifile'
 require 'open-uri'
+require 'colorize'
 # module to download Packages
 module Pkg
   def self.findPkg(query)
@@ -15,7 +16,7 @@ module Pkg
     puts "Package file:#{pfr}"
     # implemnt no donwload of pkg file by using pfr
     system("curl  -O #{packageFileURL}")
-    puts 'package file download complete'
+    puts 'package file download complete'.yellow
     Pkg.downloadLatest
   end
 
@@ -39,5 +40,5 @@ if ARGV[0] == 'add'
   Pkg.findPkg @param1.to_s
 elsif Pkg.findPkg @param1.to_s
 else
-  puts 'Unknown Command'
+  puts 'Unknown Command'.red
 end
