@@ -6,23 +6,21 @@ require 'colorize'
 module Pkg
   def self.findPkg(query)
     $query = query
-    puts "Getting #{$query}".colorize(:yellow)
+    puts "Starting install of  #{$query}".colorize(:yellow)
     Pkg.getPkgfile
   end
 
   def self.getPkgfile
     pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini").read
     packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
-    puts "Package file:#{pfr}"
-    # implemnt no donwload of pkg file by using pfr
     system("curl  -O #{packageFileURL}")
-    puts 'package file download complete'.colorize(:yellow)
+    puts 'package file download complete!'.colorize(:green)
     Pkg.downloadLatest
   end
 
   def self.downloadLatest
     file = IniFile.load("#{$query}.ini")
-    puts 'loaded file'
+    puts 'Package file read!'.colorize(:green)
     pkgdata = file['package']
     zipsupport = pkgdata['Media']
     if zipsupport == true
