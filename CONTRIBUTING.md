@@ -44,7 +44,7 @@ ____
     * :shirt: `:shirt:` when fixing linter warnings
     * :bus: `:bus:` when adding a feature
     * :gear: `:gear:` when changing configs of anything
-    * :rocket: `:rocket:` when launching a relase
+    * :rocket: `:rocket:` when launching a release , or prepping for a release
     * :beers: `:beers:` when optimizing something
     * :beer: `:beer:` write code drunkenly
     * :busts_in_silhouette:`:busts_in_silhouette:` when adding contributers
