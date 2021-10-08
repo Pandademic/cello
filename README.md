@@ -3,7 +3,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/pandademic/latte/badge)](https://www.codefactor.io/repository/github/pandademic/latte)
 <a href="https://gitpod.io/#github.com/Pandademic/Latte">![gitpod](https://img.shields.io/static/v1?label=Gitpod&message=Open%20in%20Gitpod&color=orange&logo=Gitpod)</a>
 <a href="https://github.dev/Pandademic/Latte">![gh web editor](https://img.shields.io/badge/github%20web%20editor-ready-green?logo=github)</a>
-![Last release](https://img.shields.io/badge/Last%20release%3A-0.3.1-orange)
+![Last release](https://img.shields.io/badge/Last%20release%3A-0.4.0-orange)
 ![GitHub issues](https://img.shields.io/github/issues/Pandademic/latte?style=plastic)
 [![Depfu](https://badges.depfu.com/badges/3aef7c1603f63a6745f347346aef53fa/count.svg)](https://depfu.com/github/Pandademic/Latte?project_id=31718)
 [![Depfu](https://badges.depfu.com/badges/3aef7c1603f63a6745f347346aef53fa/overview.svg)](https://depfu.com/github/Pandademic/Latte?project_id=31718)
@@ -18,7 +18,7 @@ Latte , The Hackable , Open source , Cross Platform ,Package Manager.
 - ✨ It's Small!
 - ✨ Its Fast! (Mostly)
 - ✨ It's Supported on Pretty much everything!
-- ✨ Oh for goodness sake , The README is bigger than the actual Package manager! *seriously , no kidding you can check the file size!*
+- ✨ Oh for goodness sake , The README is bigger than the actual Package manager! *seriously , no kidding you can check the file size!It's just bigger than it has to be for the README to be 2x bigger*
 - ✨ More to come!
 
 # Install
