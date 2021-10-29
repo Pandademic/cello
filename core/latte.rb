@@ -11,8 +11,11 @@ module Pkg
   end
 
   def self.getPkgfile
-    pfr = URI.open("https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini").read
-    packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
+    if $TRAY == "main"
+      packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
+    else
+      packageFileURL= "https://raw.githubusercontent.com/#{$TRAY}/master/pkgs/#{$query}.ini"
+    end
     system("curl  -O #{packageFileURL}")
     puts 'package file download complete!'.colorize(:green)
     Pkg.downloadLatest
@@ -25,8 +28,8 @@ module Pkg
     zipsupport = pkgdata['Media']
     if zipsupport == true
       @RURL = pkgdata['MediaUrl']
-      system "curl -O #{@RURL}"
-      puts "#{$query} install success!".colorize(:green)
+      system("curl -O #{@RURL}")
+      puts "Installed #{query} from #{$TRAY}".colorize(:green)
     else
       @Isc = pkgdata['InstallCommand'] # install command
       system @Isc.to_s
@@ -35,7 +38,9 @@ module Pkg
   end
 end
 @param1 = ARGV[1]
+$TRAY = ARGV[2].chomp(":tray")
 if ARGV[0] == 'add'
+  puts "Starting install of #@param1 from #$TRAY".colorize(:green)
   Pkg.findPkg @param1.to_s
 else
   puts 'Unknown Command'.colorize(:red)
