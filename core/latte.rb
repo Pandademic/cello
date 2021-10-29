@@ -29,7 +29,7 @@ module Pkg
     if zipsupport == true
       @RURL = pkgdata['MediaUrl']
       system("curl -O #{@RURL}")
-      puts "Installed #{query} from #{$TRAY}".colorize(:green)
+      puts "Installed #{$query} from #{$TRAY}".colorize(:green)
     else
       @Isc = pkgdata['InstallCommand'] # install command
       system @Isc.to_s
