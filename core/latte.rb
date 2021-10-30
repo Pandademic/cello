@@ -38,7 +38,8 @@ module Pkg
   end
 end
 @param1 = ARGV[1]
-$TRAY = ARGV[2].chomp(":tray")
+@tmpTray=ARGV[2]
+$TRAY =@tmpTray[0...-5]
 if ARGV[0] == 'add'
   puts "Starting install of #@param1 from #$TRAY".colorize(:green)
   Pkg.findPkg @param1.to_s
