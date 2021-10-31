@@ -37,6 +37,7 @@ module Pkg
     end
   end
 end
+@param1=ARGV[1]
 $TRAY=ARGV[2]
 $TRAY.delete_suffix(':tray')
 if ARGV[0] == 'add'
