@@ -13,6 +13,6 @@ jobs:
     - run: bundle install
     - run: curl --version
     #- run: ruby core/latte.rb installImg 'https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/22130127/Pug-puppy-standing-in-profile-on-a-white-background.jpg'
-    - run: ruby core/latte.rb add brew-source main:tray
-    - run: ruby core/latte.rb add brew main:tray
-    - run: ruby core/latte.rb add gettting-started main:tray
+    - run: ruby core/latte.rb add brew-source --main
+    - run: ruby core/latte.rb add brew  --main
+    - run: ruby core/latte.rb add gettting-started --main

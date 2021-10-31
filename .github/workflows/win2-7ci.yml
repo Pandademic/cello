@@ -12,4 +12,4 @@ jobs:
     #- run: bundle lock --add-platform x86_64-linux
     - run: bundle install
     - run: curl --version
-    - run: ruby core/latte.rb add gettting-started main:tray
+    - run: ruby core/latte.rb add gettting-started --main
