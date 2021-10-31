@@ -37,11 +37,10 @@ module Pkg
     end
   end
 end
-@param1 = ARGV[1]
-@tmpTray=ARGV[2]
-$TRAY=@tmpTray.delete_suffix(':tray')
+$TRAY=ARGV[2]
+$TRAY.delete_suffix(':tray')
 if ARGV[0] == 'add'
-  puts "Starting install of #@param1 from #$TRAY".colorize(:green)
+  puts "Starting install of #{@param1} from #{$TRAY}".colorize(:green)
   Pkg.findPkg @param1.to_s
 else
   puts 'Unknown Command'.colorize(:red)
