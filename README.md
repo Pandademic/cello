@@ -1,28 +1,18 @@
-# Latte 
 
-[![CodeFactor](https://www.codefactor.io/repository/github/pandademic/latte/badge)](https://www.codefactor.io/repository/github/pandademic/latte)
-<a href="https://gitpod.io/#github.com/Pandademic/Latte">![gitpod](https://img.shields.io/static/v1?label=Gitpod&message=Open%20in%20Gitpod&color=orange&logo=Gitpod)</a>
-<a href="https://github.dev/Pandademic/Latte">![gh web editor](https://img.shields.io/badge/github%20web%20editor-ready-green?logo=github)</a>
-![Last release](https://img.shields.io/badge/Last%20release%3A-0.4.0-orange)
-![GitHub issues](https://img.shields.io/github/issues/Pandademic/latte?style=plastic)
-[![Depfu](https://badges.depfu.com/badges/3aef7c1603f63a6745f347346aef53fa/count.svg)](https://depfu.com/github/Pandademic/Latte?project_id=31718)
-[![Depfu](https://badges.depfu.com/badges/3aef7c1603f63a6745f347346aef53fa/overview.svg)](https://depfu.com/github/Pandademic/Latte?project_id=31718)
+# ☕ Latte ☕
+Latte ☕ is the package manager for people who crave a small , simple , extensible , package manager.
 
----
 
-Latte , The Hackable , Open source , Cross Platform ,Package Manager.
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-# Features
------
 
-- ✨ It's Small!
-- ✨ Its Fast! (Mostly)
-- ✨ It's Supported on Pretty much everything!
-- ✨ Oh for goodness sake , The README is bigger than the actual Package manager! *seriously , no kidding you can check the file size!It's just bigger than it has to be for the README to be 2x bigger*
-- ✨ More to come!
+## Features
 
-# Install
-- - -
+- 🐞 small , 1.17 **KB** large
+- 😃  easy install & usage
+- 🚀 build you own **database** of packages , similar to ``scoop``'s buckets
+
+## Installation
  ## Linux:
  ____
  ### prerequisites
@@ -72,7 +62,7 @@ latte add getting-started
  - Delete the gemfile
  - You should now be able to use Latte. Try:
 ``` sh 
-latte add getting-started
+latte add getting-started --main
 ```
 ## windows
 ---
@@ -89,10 +79,17 @@ bundle install
 ``
 - delete the gemfile.
 - you should  be good to use latte!
-# Creating a package
-__________
-steps:
-- 1. Fork this repo
-- 2. Make a new github repo and do your coding there
-- 3. Then in the Fork of packages folder create a packageName.ini where packageName is your packages name.Then look at the <a href="https://github.com/Pandademic/Latte/blob/master/docs/package_example.ini">package_example.ini</a> in the docs to format the package.ini
-- 4. Push your changes in the fork to a pull request
+    
+## Usage/Examples
+___
+A latte command consist's of 4 parts:
+- the *command* , always `latte`
+- the *call* , something like `add` 
+- the *package* the name of the package
+- the *tray* essentialy the database of your choice , a github repo of `ini` files . The tray is either `main` or `AuthorsGHUsername/TheirRepoName` in format : username/repo . With a `--` in front.
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
