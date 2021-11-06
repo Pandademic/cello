@@ -2,6 +2,7 @@
 require 'inifile'
 require 'open-uri'
 require 'colorize'
+require 'faraday'
 # module to download Packages
 module Pkg
   def self.findPkg(query)
@@ -9,15 +10,18 @@ module Pkg
       puts "Empty package names are not allowed".colorize(:red)
       exit 1
     end
-    puts "Starting install of  #{$query}".colorize(:yellow)
     Pkg.getPkgfile
   end
-
-  def self.getPkgfile
+  def self.getPkgfile 
     if $TRAY == "main"
       packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
     else
       packageFileURL= "https://raw.githubusercontent.com/#{$TRAY}/master/pkgs/#{$query}.ini"
+    end
+    res = Faraday.get("#{packageFileURL}").status
+    if "#{res}" == "404"
+      puts "#{$query} does not exist in #{$TRAY}".colorize(:red)
+      exit 1
     end
     system("curl  -O #{packageFileURL}")
     puts 'package file download complete!'.colorize(:green)
