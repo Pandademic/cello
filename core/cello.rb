@@ -14,7 +14,7 @@ module Pkg
   end
   def self.getPkgfile 
     if $TRAY == "main"
-      packageFileURL = "https://raw.githubusercontent.com/Pandademic/Latte/master/pkgs/#{$query}.ini"
+      packageFileURL = "https://raw.githubusercontent.com/Pandademic/cello/master/pkgs/#{$query}.ini"
     else
       packageFileURL= "https://raw.githubusercontent.com/#{$TRAY}/master/pkgs/#{$query}.ini"
     end
