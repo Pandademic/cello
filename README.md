@@ -1,6 +1,6 @@
 
-# ☕ Latte ☕
-Latte ☕ is the package manager for people who crave a small , simple , extensible , package manager.
+# ☕ Cello ☕
+Cello ☕ is the package manager for people who crave a small , simple , extensible , package manager.
 
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
@@ -22,14 +22,14 @@ Latte ☕ is the package manager for people who crave a small , simple , extensi
  - bundler gem
  
  - - -
- - extract the file called lattefile & the gemfile into your home directory
+ - extract the file called cello.rb & the gemfile into your home directory
  - in your .bashrc or .zshrc add:
   ``` sh
- alias latte ="ruby ~/lattefile" 
+ alias Cello ="ruby ~/cello.rb" 
  ``` 
  - if using fish , in your config.fish add:
  ``` fish
- alias latte "ruby ~/lattefile"
+ alias Cello "ruby ~/cello.rb"
  ```
  - and then run 
  ``` sh
@@ -37,22 +37,22 @@ Latte ☕ is the package manager for people who crave a small , simple , extensi
  ```
  to install dependencies.
  - Delete the gemfile
- - You should now be able to use Latte. Try:
+ - You should now be able to use Cello. Try:
 ``` sh 
-latte add getting-started
+Cello add getting-started
 ```
 ## macos
 - - -
 ### prereqisites 
 ----
- - extract the file called lattefile & the gemfile into your home directory
+ - extract the file called cello.rb & the gemfile into your home directory
  - in your .bashrc or .zshrc add:
   ``` sh
- alias latte ="ruby ~/lattefile" 
+ alias Cello ="ruby ~/cello.rb" 
  ``` 
  - if using fish , in your config.fish add:
  ``` fish
- alias latte "ruby ~/lattefile"
+ alias Cello "ruby ~/cello.rb"
  ```
  - and then run 
  ``` sh
@@ -60,30 +60,30 @@ latte add getting-started
  ```
  to install dependencies.
  - Delete the gemfile
- - You should now be able to use Latte. Try:
+ - You should now be able to use Cello. Try:
 ``` sh 
-latte add getting-started --main
+Cello add getting-started --main
 ```
 ## windows
 ---
 ### prereqisutes
 ----
 - ruby 2.6 or higher
-- latte production zip
-- Latte.bat from the `/tools/install/` dir
+- Cello production zip
+- Cello.bat from the `/tools/install/` dir
 - bundler gem
 ---
-- Extract the lattefile & the gemfile into your home directory.
+- Extract the cello.rb & the gemfile into your home directory.
 - run ``sh
 bundle install
 ``
 - delete the gemfile.
-- you should  be good to use latte!
+- you should  be good to use Cello!
     
 ## Usage/Examples
 ___
-A latte command consist's of 4 parts:
-- the *command* , always `latte`
+A Cello command consist's of 4 parts:
+- the *command* , always `Cello`
 - the *call* , something like `add` 
 - the *package* the name of the package
 - the *tray* essentialy the database of your choice , a github repo of `ini` files . The tray is either `main` or `AuthorsGHUsername/TheirRepoName` in format : username/repo . With a `--` in front.

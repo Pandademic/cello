@@ -1,4 +1,4 @@
-First of all , Thank you for considering contributing to latte.
+First of all , Thank you for considering contributing to cello.
 <br>
 Here are some of the ways you can help out:
 - ✨ Report a bug
@@ -9,13 +9,13 @@ Here are some of the ways you can help out:
 # bug reporting
 ____
 Make sure your issue is reprodusible and is  `` notabug``.
-check if your latte is modified.
+check if your cello is modified.
 check if the issue already is open. Just a cursory search , that's all.
 
 
 # pull requests
 ____
-Make sure your pull adheres to the <a href="https://github.com/Pandademic/Latte/blob/master/CONTRIBUTING.md/#Style">style guide</a>
+Make sure your pull adheres to the <a href="https://github.com/Pandademic/latte/blob/master/CONTRIBUTING.md/#Style">style guide</a>
 
 
 # Style 
