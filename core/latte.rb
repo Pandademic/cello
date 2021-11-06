@@ -5,7 +5,10 @@ require 'colorize'
 # module to download Packages
 module Pkg
   def self.findPkg(query)
-    $query = query
+    if $query == ""
+      puts "Empty package names are not allowed".colorize(:red)
+      exit 1
+    end
     puts "Starting install of  #{$query}".colorize(:yellow)
     Pkg.getPkgfile
   end
@@ -30,18 +33,20 @@ module Pkg
       @RURL = pkgdata['MediaUrl']
       system("curl -O #{@RURL}")
       puts "Installed #{$query} from #{$TRAY}".colorize(:green)
+      exit 0
     else
       @Isc = pkgdata['InstallCommand'] # install command
       system @Isc.to_s
-      puts "#{$query} installed successfully".colorize(:green)
+      puts "#{$query} from #{$TRAY} installed successfully".colorize(:green)
+      exit 0
     end
   end
 end
-@param1=ARGV[1]
+$query=ARGV[1]
 $TRAY=ARGV[2].delete("--")
 if ARGV[0] == 'add'
-  puts "Starting install of #{@param1} from #{$TRAY}".colorize(:green)
-  Pkg.findPkg @param1.to_s
+  puts "Starting install of #{$query} from #{$TRAY}".colorize(:green)
+  Pkg.findPkg $query
 else
   puts 'Unknown Command'.colorize(:red)
   exit 1
