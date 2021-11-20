@@ -4,11 +4,20 @@ require 'open-uri'
 require 'colorize'
 require 'faraday'
 # module to download Packages
+module Error
+  def self.emptyPkgName(query)
+    puts "Empty Package name could not be queried at specified server(#{$TRAY})".colorize(:red)
+    exit 1
+  end
+  def self.server404(server,query,serverurl)
+    puts "#{server}(#{serverurl}) responded with 404 for query #{query} ".colorize(:red)
+    exit 1
+  end
+end
 module Pkg
   def self.findPkg(query)
     if $query == ""
-      puts "Empty package names are not allowed".colorize(:red)
-      exit 1
+      Error.emptyPkgName($query.to_s,)
     end
     Pkg.getPkgfile
   end
@@ -20,8 +29,7 @@ module Pkg
     end
     res = Faraday.get("#{packageFileURL}").status
     if "#{res}" == "404"
-      puts "#{$query} does not exist in #{$TRAY}".colorize(:red)
-      exit 1
+        Error.server404($TRAY.to_s,$query.to_s,packageFileURL.to_s)
     end
     system("curl  -O #{packageFileURL}")
     puts 'package file download complete!'.colorize(:green)
