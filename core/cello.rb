@@ -30,7 +30,25 @@ module Pkg
     res = Faraday.get("#{packageFileURL}").status
     if "#{res}" == "404"
         Error.server404($TRAY.to_s,$query.to_s,packageFileURL.to_s)
+
+    if $query == ''
+      puts 'Empty package names are not allowed'.colorize(:red)
+      exit 1
     end
+    Pkg.getPkgfile
+  end
+
+  def self.getPkgfile
+    if $TRAY == 'main'
+       packageFileURL = "https://raw.githubusercontent.com/Pandademic/cello/master/pkgs/#{$query}.ini"
+    else
+       packageFileURL = "https://raw.githubusercontent.com/#{$TRAY}/master/pkgs/#{$query}.ini"
+    end
+    res = Faraday.get(packageFileURL.to_s).status
+    if res.to_s == '404'
+      puts "#{$query} does not exist in #{$TRAY}".colorize(:red)
+      exit 1
+
     system("curl  -O #{packageFileURL}")
     puts 'package file download complete!'.colorize(:green)
     Pkg.downloadLatest
@@ -45,17 +63,16 @@ module Pkg
       @RURL = pkgdata['MediaUrl']
       system("curl -O #{@RURL}")
       puts "Installed #{$query} from #{$TRAY}".colorize(:green)
-      exit 0
     else
       @Isc = pkgdata['InstallCommand'] # install command
       system @Isc.to_s
       puts "#{$query} from #{$TRAY} installed successfully".colorize(:green)
-      exit 0
     end
+    exit 0
   end
 end
-$query=ARGV[1]
-$TRAY=ARGV[2].delete("--")
+$query = ARGV[1]
+$TRAY = ARGV[2].delete('--')
 if ARGV[0] == 'add'
   puts "Starting install of #{$query} from #{$TRAY}".colorize(:green)
   Pkg.findPkg $query
