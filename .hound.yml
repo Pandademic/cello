@@ -1,0 +1,11 @@
+scss:
+  enabled: false
+
+rubocop:
+  config_file: .rubocop.yml
+
+
+jshint:
+  enabled: false
+flog:
+  enabled: true
