@@ -1,5 +1,4 @@
 # rubocop config
-
 Metrics/MethodLength:
    Enabled: false
 AllCops:
