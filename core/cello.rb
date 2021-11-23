@@ -14,11 +14,11 @@ module Pkg
   end
 
   def self.getPkgfile
-    if $TRAY == 'main'
-        packageFileURL="https://raw.githubusercontent.com/Pandademic/cello/master/pkgs/#{$query}.ini"
-    else
-        packageFileURL="https://raw.githubusercontent.com/#{$TRAY}/master/pkgs/#{$query}.ini"
-    end
+    packageFileURL = if $TRAY == 'main'
+                       "https://raw.githubusercontent.com/Pandademic/cello/master/pkgs/#{$query}.ini"
+                     else
+                       "https://raw.githubusercontent.com/#{$TRAY}/master/pkgs/#{$query}.ini"
+                     end
     res = Faraday.get(packageFileURL.to_s).status
     if res.to_s == '404'
       puts "#{$query} does not exist in #{$TRAY}".colorize(:red)
