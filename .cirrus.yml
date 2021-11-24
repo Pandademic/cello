@@ -1,5 +1,0 @@
-assemble_task:
-  container:
-    image: ruby:latest
-  assemble_script:
-    .github/ci/cirrus-test.sh
