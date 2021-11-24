@@ -1,0 +1,9 @@
+test_cello:
+  container:
+    image: ruby:latest
+  test_all: 
+  - bundle install 
+  - gem install rubocop
+  - rubocop
+  - ruby core/cello.rb add getting-started --main
+  - ruby core/engine.rb add getting-started --main
