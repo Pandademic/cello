@@ -26,19 +26,19 @@ jobs:
         #bundler-cache: true # runs 'bundle install' and caches installed gems automatically  
           - name: Install Dependencies
             run: bundle install
-          - name: setup git config
-            run: |
-              git config user.name "GitHub Actions Bot"
-              git config user.email "<74566464+Pandademic@users.noreply.github.com>"
+          #- name: setup git config
+          #  run: |
+          #    git config user.name "GitHub Actions Bot"
+          #    git config user.email "<74566464+Pandademic@users.noreply.github.com>"
           - name: install rubocop
             run: gem install rubocop
           - name: run rubocop
             run: rubocop -A
-          - name: push to github
-            run: | 
-               git stage -A
-               git commit  -m "Rubocop fixes"
-               git push origin master
+          #- name: push to github
+          #  run: | 
+          #     git stage -A
+          #     git commit  -m "Rubocop fixes"
+          #     git push origin master
           - name: run install getting started from main on ruby ${{matrix.RUBY}} on ${{matrix.os}}
             run: ruby core/cello.rb add getting-started --main
           
