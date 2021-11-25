@@ -24,13 +24,22 @@ jobs:
             with:
               ruby-version: ${{matrix.RUBY}} # Not needed with a .ruby-version file
         #bundler-cache: true # runs 'bundle install' and caches installed gems automatically  
-          - name: Run info
-            run: echo 'running ruby ${{matrix.RUBY}}'
           - name: Install Dependencies
             run: bundle install
+          - name: setup git config
+            run: |
+              # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+              git config user.name "CelloBot"
+              git config user.email "<>"
           - name: install rubocop
             run: gem install rubocop
           - name: run rubocop
-            run: rubocop
-          - run: run install getting started from main on ruby ${{matrix.RUBY}} on ${{matrix.os}}
+            run: rubocop -A
+          - name: push to github
+            run: |
+               git stage -A
+               git commit -a -m "Rubocop fixes"
+               git push origin
+          - name: run install getting started from main on ruby ${{matrix.RUBY}} on ${{matrix.os}}
+            run: ruby core/cello.rb add getting-started --main
           
