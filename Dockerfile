@@ -6,4 +6,3 @@ COPY ..
 RUN gem install rubocop
 RUN rubocop
 CMD ruby core/cello.rb add getting-started --main
-CMD ruby core/engine.rb add getting-started --main
