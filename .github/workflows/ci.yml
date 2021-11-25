@@ -1,4 +1,4 @@
-name: test cello on ${{matrix.os }} with ruby ${{matrix.RUBY}}
+name: test cello 
 on: push
 jobs:
   build:
