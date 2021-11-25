@@ -18,6 +18,29 @@ jobs:
 
           - os: windows-latest
             RUBY: 2.7
+                  - os: macos-latest
+            RUBY: 2.6
+            
+          - os: macos-11
+            RUBY: 2.6
+           
+          - os: ubuntu-latest
+            RUBY: 2.6
+
+          - os: windows-latest
+            RUBY: 2.6
+            
+          - os: macos-latest
+            RUBY: 3.0
+            
+          - os: macos-11
+            RUBY: 3.0
+           
+          - os: ubuntu-latest
+            RUBY: 3.0
+
+          - os: windows-latest
+            RUBY: 3.0
     steps:
           - uses: actions/checkout@v1
           - uses: ruby/setup-ruby@v1
