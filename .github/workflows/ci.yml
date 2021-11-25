@@ -35,11 +35,10 @@ jobs:
           - name: run rubocop
             run: rubocop -A
           - name: push to github
-            run: |
-               git push origin HEAD:master 
+            run: | 
                git stage -A
-               git commit -a -m "Rubocop fixes"
-               git push origin
+               git commit  -m "Rubocop fixes"
+               git push origin master
           - name: run install getting started from main on ruby ${{matrix.RUBY}} on ${{matrix.os}}
             run: ruby core/cello.rb add getting-started --main
           
