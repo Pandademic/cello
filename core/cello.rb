@@ -5,7 +5,7 @@ require 'colorize'
 require 'faraday'
 # module to download Packages
 module Pkg
-  def self.findPkg(query)
+  def self.findPkg(_query)
     if $query == ''
       puts 'Empty package names are not allowed'.colorize(:red)
       exit 1
