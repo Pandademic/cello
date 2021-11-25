@@ -17,3 +17,5 @@ Naming/FileName:
    Enabled: false
 Naming/VariableName:
    Enabled: false
+Style/GlobalVars:
+   Enabled: false
