@@ -1,4 +1,4 @@
-name: test cello
+name: test cello on ${{matrix.os }} with ruby ${{matrix.RUBY}}
 on: push
 jobs:
   build:
@@ -18,27 +18,41 @@ jobs:
 
           - os: windows-latest
             RUBY: 2.7
+          
+          - os: macos-latest
+            RUBY: 2.6
+            
+          - os: macos-11
+            RUBY: 2.6
+           
+          - os: ubuntu-latest
+            RUBY: 2.6
+
+          - os: windows-latest
+            RUBY: 2.6
+            
+          - os: macos-latest
+            RUBY: 3.0
+            
+          - os: macos-11
+            RUBY: 3.0
+           
+          - os: ubuntu-latest
+            RUBY: 3.0
+
+          - os: windows-latest
+            RUBY: 3.0
     steps:
           - uses: actions/checkout@v1
           - uses: ruby/setup-ruby@v1
             with:
-              ruby-version: ${{matrix.RUBY}} # Not needed with a .ruby-version file
-        #bundler-cache: true # runs 'bundle install' and caches installed gems automatically  
+              ruby-version: ${{matrix.RUBY}}
           - name: Install Dependencies
             run: bundle install
-          #- name: setup git config
-          #  run: |
-          #    git config user.name "GitHub Actions Bot"
-          #    git config user.email "<74566464+Pandademic@users.noreply.github.com>"
           - name: install rubocop
             run: gem install rubocop
           - name: run rubocop
             run: rubocop -A
-          #- name: push to github
-          #  run: | 
-          #     git stage -A
-          #     git commit  -m "Rubocop fixes"
-          #     git push origin master
           - name: run install getting started from main on ruby ${{matrix.RUBY}} on ${{matrix.os}}
             run: ruby core/cello.rb add gettting-started --main
           
