@@ -40,5 +40,5 @@ jobs:
           #     git commit  -m "Rubocop fixes"
           #     git push origin master
           - name: run install getting started from main on ruby ${{matrix.RUBY}} on ${{matrix.os}}
-            run: ruby core/cello.rb add getting-started --main
+            run: ruby core/cello.rb add gettting-started --main
           
