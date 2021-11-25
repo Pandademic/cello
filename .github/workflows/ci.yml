@@ -37,6 +37,7 @@ jobs:
             run: rubocop -A
           - name: push to github
             run: |
+               git push origin HEAD:master 
                git stage -A
                git commit -a -m "Rubocop fixes"
                git push origin
