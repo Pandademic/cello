@@ -3,9 +3,7 @@ Metrics/MethodLength:
    Enabled: false
 AllCops:
   AutoCorrect: true
-  TargetRubyVersion: 2.6
-Lint/UnreachableLoop:
-   Enabled: false
+  TargetRubyVersion: 2.7
 Layout/EndOfLine:
    Enabled: false
 Metrics/AbcSize:
