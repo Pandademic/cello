@@ -1,0 +1,58 @@
+name: test cello 
+on: push
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+
+        include:
+          - os: macos-latest
+            RUBY: 2.7
+            
+          - os: macos-11
+            RUBY: 2.7
+           
+          - os: ubuntu-latest
+            RUBY: 2.7
+
+          - os: windows-latest
+            RUBY: 2.7
+            
+          - os: macos-latest
+            RUBY: 2.6
+            
+          - os: macos-11
+            RUBY: 2.6
+           
+          - os: ubuntu-latest
+            RUBY: 2.6
+
+          - os: windows-latest
+            RUBY: 2.6
+            
+          - os: macos-latest
+            RUBY: 3.0
+            
+          - os: macos-11
+            RUBY: 3.0
+           
+          - os: ubuntu-latest
+            RUBY: 3.0
+
+          - os: windows-latest
+            RUBY: 3.0
+    steps:
+          - uses: actions/checkout@v1
+          - uses: ruby/setup-ruby@v1
+            with:
+              ruby-version: ${{matrix.RUBY}}
+          - name: Install Dependencies
+            run: bundle install
+          - name: install rubocop
+            run: gem install rubocop
+          - name: run rubocop
+            run: rubocop -A
+          - name: run install getting started from main on ruby ${{matrix.RUBY}} on ${{matrix.os}}
+            run: ruby core/cello.rb add gettting-started --main
+          

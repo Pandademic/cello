@@ -3,9 +3,10 @@ scss:
 
 rubocop:
   config_file: .rubocop.yml
-
-
+  version: 1.22.1
 jshint:
   enabled: false
 flog:
+  enabled: true
+reek:
   enabled: true
