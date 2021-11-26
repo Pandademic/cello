@@ -17,3 +17,5 @@ Naming/VariableName:
    Enabled: false
 Style/GlobalVars:
    Enabled: false
+Layout/TrailingBlankLines:
+   Enabled: false
