@@ -5,8 +5,8 @@ require 'colorize'
 require 'faraday'
 # module to download Packages
 module Pkg
-  def self.parsePkgName(_query)
-    if $query == ''
+  def self.parse_pkg_name(_query)
+		if $query.empty?
       puts 'Empty package names are not allowed'.colorize(:red)
       exit 1
     end
@@ -15,16 +15,16 @@ module Pkg
 
   def self.getPkgfile
     if $TRAY == 'main'
-    	packageFileURL = "https://raw.githubusercontent.com/Pandademic/cello/master/pkgs/#{$query}.ini"
+    	package_file_url = "https://raw.githubusercontent.com/Pandademic/cello/master/pkgs/#{$query}.ini"
     else
-    	packageFileURL = "https://raw.githubusercontent.com/#{$TRAY}/master/pkgs/#{$query}.ini"
+    	package_file_url = "https://raw.githubusercontent.com/#{$TRAY}/master/pkgs/#{$query}.ini"
     end
-    res = Faraday.get(packageFileURL.to_s).status
+    res = Faraday.get(package_file_url.to_s).status
     if res.to_s == '404'
       puts "#{$query} does not exist in #{$TRAY}".colorize(:red)
       exit 1
     end
-    system("curl  -O #{packageFileURL}")
+    system("curl  -O #{package_file_url}")
     puts 'package file download complete!'.colorize(:green)
     Pkg.downloadLatest
   end
@@ -34,7 +34,8 @@ module Pkg
     puts 'Package file read!'.colorize(:green)
     pkgdata = file['package']
     zipsupport = pkgdata['Media']
-    if zipsupport == true
+    #if zipsupport == true
+    if zipsupport
       @RURL = pkgdata['MediaUrl']
       system("curl -O #{@RURL}")
       puts "Installed #{$query} from #{$TRAY}".colorize(:green)
@@ -50,7 +51,7 @@ $query = ARGV[1]
 $TRAY = ARGV[2].delete('--')
 if ARGV[0] == 'add'
   puts "Starting install of #{$query} from #{$TRAY}".colorize(:green)
-  Pkg.parsePkgName $query
+  Pkg.parse_pkg_name $query
 else
   puts 'Unknown Command'.colorize(:red)
   exit 1
