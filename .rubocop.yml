@@ -3,9 +3,7 @@ Metrics/MethodLength:
    Enabled: false
 AllCops:
   AutoCorrect: true
-  TargetRubyVersion: 2.6
-Lint/UnreachableLoop:
-   Enabled: false
+  TargetRubyVersion: 2.5
 Layout/EndOfLine:
    Enabled: false
 Metrics/AbcSize:
@@ -18,4 +16,6 @@ Naming/FileName:
 Naming/VariableName:
    Enabled: false
 Style/GlobalVars:
+   Enabled: false
+Layout/TrailingEmptyLines:
    Enabled: false
