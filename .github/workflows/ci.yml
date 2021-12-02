@@ -54,5 +54,5 @@ jobs:
           - name: run rubocop
             run: rubocop -A
           - name: run install getting started from main on ruby ${{matrix.RUBY}} on ${{matrix.os}}
-            run: ruby core/cello.rb add gettting-started --main
+            run: ruby src/cello.rb add gettting-started --main
           

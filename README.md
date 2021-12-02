@@ -87,6 +87,8 @@ A Cello command consist's of 4 parts:
 - the *call* , something like `add` 
 - the *package* the name of the package
 - the *tray* essentialy the database of your choice , a github repo of `ini` files . The tray is either `main` or `AuthorsGHUsername/TheirRepoName` in format : username/repo . With a `--` in front.
+Ex:
+`cello add getting-started --main`
 
 
 ## License
