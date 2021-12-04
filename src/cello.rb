@@ -47,9 +47,10 @@ module Pkg
     exit 0
   end
 end
-$query = ARGV[1]
-$TRAY = ARGV[2].delete('--')
-if ARGV[0] == 'add'
+$userData={:cmd => ARGV[0] ,:query => ARGV[1], :tray => ARGV[2].delete('--') }
+#$query = ARGV[1]
+#$TRAY = ARGV[2].delete('--')
+if $userData[:cmd] == 'add'
   puts "Starting install of #{$query} from #{$TRAY}".colorize(:green)
   Pkg.parse_pkg_name $query
 else
