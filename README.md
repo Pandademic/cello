@@ -1,8 +1,7 @@
 
 # Cello 
 Cello  is the package manager for people who crave a small , simple , extensible , package manager.
-A similar package manger also by us is Box(htps://gitlab.com/t5861/Box)
-
+<b>:warning: Cello will be changed to `libcello` to work as the backend for a better manager - Box , more info will be put soon:warning:</b>
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 
